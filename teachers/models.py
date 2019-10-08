@@ -10,7 +10,7 @@ class Teacher(models.Model):
     last_name = models.CharField(max_length=100)
     mobile = models.CharField(max_length=15)
     email = models.CharField(max_length=200)
-    photo = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    photo = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True, default='static/img/default-teachers-pic.jpg')
     city = models.CharField(
         choices=city_choices,
         max_length=100,

@@ -93,8 +93,22 @@
       <td>{{ booking.city }}</td>
       <td>{{ booking.dance_style }}</td>
       <td>{{ booking.event_date }}</td>
-      <td>{{ booking.booking_sent }}</td>
-      <td>{{ booking.teacher_confirmed }}</td>
+      <td>{% if booking.booking_sent == True %}
+          <span class="true_button">confirmed</span>
+          {% else %}
+          <span class="false_button">Not Confirmed</span>
+          {% endif %}
+      </td>
+
+      <td>{% if booking.teacher_confirmed == True %}
+          <span class="true_button">Booked</span>
+          {% else %}
+          <span class="false_button">Not Booked</span>
+          {% endif %}
+
+      </td>
+
+
     </tr>
     {% endfor %}
   </tbody>

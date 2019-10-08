@@ -95,6 +95,33 @@
 
 
             </div>
+
+
+            <div class="row">
+            <div class="col-md-4">
+                {% if venue.photo_main %}
+                    <img src="{{ venue.photo_main.url}}" alt="pooop" class="img-fluid">
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                {% if venue.photo_1 %}
+                    <img src="{{ venue.photo_1.url}}" alt="{{ venue.venue_name }}" class="img-fluid">
+                {% endif %}
+            </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
     </div>

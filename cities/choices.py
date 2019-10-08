@@ -129,3 +129,8 @@ dance_styles =[
 
 
 ]
+
+length_choices = [
+    ('1', '1hr'),
+    ('1.5', '1.5hrs'),
+]

@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'danceuk.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'danceuknew',
+        'NAME': 'danceukparties',
         'USER': 'postgres',
         'PASSWORD': 'passw0rd',
         'HOST': 'localhost'
@@ -133,6 +133,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'danceuk/static')
 ]
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, '')
+MEDIA_URL = '/photos/'
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

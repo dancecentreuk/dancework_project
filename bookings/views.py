@@ -61,11 +61,11 @@ def booking(request, booking_id):
 
 class BookingCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Booking
-    fields = [ 'name', 'email', 'phone', 'initial_chat', 'event_date', 'book_before_date', 'start_time', 'end_time', 'special_person',
-               'dance_style', 'dance_style2', 'group_size', 'enquiry_date', 'city', 'venue_1', 'venue', 'venue_2',
+    fields = [ 'name', 'email', 'phone', 'initial_chat', 'event_date', 'book_before_date', 'event_length', 'booking_quantity', 'start_time', 'end_time', 'special_person',
+               'dance_style', 'dance_style2', 'group_size', 'enquiry_date', 'city', 'venue_1', 'venue_2', 'venue_3', 'venue_4',
                'confirmed_venue', 'venue_booked', 'venue_paid', 'teacher', 'teacher_fee', 'teacher_confirmed', 'teacher_texted',
-               'teacher_paid', 'cost', 'workshop_booked', 'booking_sent', 'deposit_paid', 'agency', 'balance_paid',
-               'problem', 'booking_notes', 'studio', 'is_advertised',]
+               'teacher_paid', 'cost', 'discount', 'workshop_booked', 'booking_sent', 'deposit_paid', 'agency', 'balance_paid',
+               'problem', 'booking_notes',  'is_advertised',]
 
     def test_func(self):
         if self.request.user.is_staff:
@@ -75,13 +75,13 @@ class BookingCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 
 class BookingUpdateView(LoginRequiredMixin, UserPassesTestMixin,  UpdateView):
     model = Booking
-    fields = ['name', 'email', 'phone', 'initial_chat', 'event_date', 'book_before_date', 'start_time', 'end_time',
+    fields = ['name', 'email', 'phone', 'initial_chat', 'event_date', 'book_before_date', 'event_length', 'booking_quantity', 'start_time', 'end_time',
               'special_person',
-              'dance_style', 'dance_style2', 'group_size', 'enquiry_date', 'city', 'venue_1', 'venue', 'venue_2',
+              'dance_style', 'dance_style2', 'group_size', 'enquiry_date', 'city', 'venue_1', 'venue_2', 'venue_3', 'venue_4',
               'confirmed_venue', 'venue_booked', 'venue_paid', 'teacher', 'teacher_fee', 'teacher_confirmed',
               'teacher_texted',
-              'teacher_paid', 'cost', 'workshop_booked', 'booking_sent', 'deposit_paid', 'agency', 'balance_paid',
-              'problem', 'booking_notes', 'studio', 'is_advertised',]
+              'teacher_paid', 'cost',  'discount', 'workshop_booked', 'booking_sent', 'deposit_paid', 'agency', 'balance_paid',
+              'problem', 'booking_notes',  'is_advertised',]
 
     def test_func(self):
         if self.request.user.is_staff:

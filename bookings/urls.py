@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import bookings, booking, BookingCreateView, BookingUpdateView, search, BookingDeleteView
 
+
 app_name = 'bookings'
 
 urlpatterns = [
