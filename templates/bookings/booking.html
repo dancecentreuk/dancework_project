@@ -1555,6 +1555,132 @@
 
 
 
+
+
+    </div>
+  </div>
+
+    <div class="card">
+    <div class="card-header" id="headingEleven">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+          email invoice
+        </button>
+      </h5>
+    </div>
+    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+      <div class="card-body">
+         <section id="dance-header">
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-3">Dance Hen Party {{ booking.name | title }} Invoice</h1>
+                </div>
+            </div>
+          </section>
+
+
+          <section id="package-includes">
+            <div class="container">
+              <div class="row  mx-1 my-3 ">
+                  <div class="col-3"></div>
+                  <div class="col-6">
+
+
+                  <div class="card-deck">
+                      <div class="card border-primary">
+                          <div class="card-header special-allinclusive">Package</div>
+                          <ul class="list-group list-group-flush">
+                              <li class="list-group-item text-center font-weight-bold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
+                {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}} </li>
+                            </ul>
+
+                        <div class="card-body">
+
+                                <ul class="list-group list-group-flush">
+                                        <li class="list-group-item text-center">
+                                                <p>
+                                                    {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
+                {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}}
+                                                </p>
+                                                <br>
+
+
+
+
+                                                <p>
+                                                        Name of Hen:  {{ booking.special_person }}
+                                                </p>
+                                                <br>
+
+
+                                                <p class="font-weight-bold">
+                                                        Location
+                                                </p>
+
+
+                                                <p>
+                                                        Dance Hen Parties @ <br>
+                                                        {{ booking.confirmed_venue.address }} <br>
+                                                          {{ booking.confirmed_venue.postcode }}
+                                                </p>
+                                                <br>
+
+                                                <p class="font-weight-bold">Ideas on What to Wear </p>
+
+                                                <p>
+                                                     comfortable clothing trainers for your feet <br>
+
+                                                </p>
+
+
+                                        </li>
+                                        <li class="list-group-item">
+                                            Deposit : £50 via bank transfer or Paypal
+                                        </li>
+                                        <li class="list-group-item">
+                                                Balance : £{{ booking.balance | floatformat:2 }} paid up to 2 days before the booking
+                                        </li>
+                                        <li class="list-group-item">
+                                                Bubbly : not Included
+                                        </li>
+                                        <li class="list-group-item text-muted">
+                                                Click link below to pay the deposit
+                                        </li>
+                                        <li class="list-group-item">
+                                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                                <input type="hidden" name="cmd" value="_s-xclick">
+                                                <input type="hidden" name="hosted_button_id" value="G3R53CPS6TQL8">
+                                                <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                                                <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                                                </form>
+
+
+                                        </li>
+                                </ul>
+
+                                <div class="card-footer text-muted font-weight-bold">
+                                        Total : £{{ booking.total_cost | floatformat:2 }}
+                                      </div>
+
+
+                        </div>
+                      </div>
+
+
+                    </div>
+                    </div>
+                    <div class="col-3"></div>
+
+
+
+
+
+
+
+              </div>
+            </div>
+        </section>
+      </div>
     </div>
   </div>
 
