@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
-    </list>
+    <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +35,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8616">
-              <caret line="623" lean-forward="true" selection-start-line="623" selection-end-line="623" />
+            <state relative-caret-position="140">
+              <caret line="619" column="50" selection-start-line="619" selection-start-column="50" selection-end-line="619" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -271,8 +269,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37619048" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37619048" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -639,8 +637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8616">
-          <caret line="623" lean-forward="true" selection-start-line="623" selection-end-line="623" />
+        <state relative-caret-position="140">
+          <caret line="619" column="50" selection-start-line="619" selection-start-column="50" selection-end-line="619" selection-end-column="50" />
         </state>
       </provider>
     </entry>
