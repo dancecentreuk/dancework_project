@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="" />
+    <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +37,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="619" column="50" selection-start-line="619" selection-start-column="50" selection-end-line="619" selection-end-column="50" />
+            <state relative-caret-position="283">
+              <caret line="620" lean-forward="true" selection-start-line="620" selection-end-line="620" />
             </state>
           </provider>
         </entry>
@@ -637,8 +639,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="619" column="50" selection-start-line="619" selection-start-column="50" selection-end-line="619" selection-end-column="50" />
+        <state relative-caret-position="283">
+          <caret line="620" lean-forward="true" selection-start-line="620" selection-end-line="620" />
         </state>
       </provider>
     </entry>
