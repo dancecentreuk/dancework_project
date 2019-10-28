@@ -271,6 +271,16 @@
                             1.5hr dance Party your party is £{{ booking.cost }} + the cost of the venue  (from £20ph) <br>
 
                         </ol>
+
+
+                        {% if booking.discount %}
+                            Discount <br>
+                            plus an additional  £{{ booking.discount }} off !!  a 1.5 hr Dance workshop if booked before the {{ booking.book_before_date|date:"l jS   F Y" }} <br>
+                        {% endif %}
+                    <ol>
+                                                1.5hr dance Party your party is £{{ booking.book_before_discount }} + the cost of the venue  (from £20ph) <br>
+
+                    </ol>
                     </ul>
 
 
