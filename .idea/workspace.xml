@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dances/_irish.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dances/_irish.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,20 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="620" lean-forward="true" selection-start-line="620" selection-end-line="620" />
+            <state relative-caret-position="209">
+              <caret line="614" lean-forward="true" selection-start-line="614" selection-end-line="614" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_irish.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_irish.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/dances/_irish.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="45">
+              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -176,8 +176,8 @@
         <option value="$PROJECT_DIR$/templates/dances/_disney.html" />
         <option value="$PROJECT_DIR$/templates/dances/_musicals.html" />
         <option value="$PROJECT_DIR$/templates/dances/_samba.html" />
-        <option value="$PROJECT_DIR$/templates/dances/_irish.html" />
         <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
+        <option value="$PROJECT_DIR$/templates/dances/_irish.html" />
       </list>
     </option>
   </component>
@@ -271,8 +271,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37619048" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37619048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -630,17 +630,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dances/_irish.html">
+    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="209">
+          <caret line="614" lean-forward="true" selection-start-line="614" selection-end-line="614" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
+    <entry file="file://$PROJECT_DIR$/templates/dances/_irish.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="620" lean-forward="true" selection-start-line="620" selection-end-line="620" />
+        <state relative-caret-position="45">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
         </state>
       </provider>
     </entry>
