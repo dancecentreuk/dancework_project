@@ -79,7 +79,7 @@ class Booking(models.Model):
 
 
     def book_before_discount(self):
-        return self.cost() - self.discount()
+        return self.cost - self.discount
 
 
 
