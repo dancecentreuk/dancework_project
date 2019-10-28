@@ -494,11 +494,6 @@
             </p><br>
 
 
-        <p>
-
-            {{ booking.dance_style_id }}
-        </p>
-
 
 
 
@@ -619,6 +614,10 @@
                 {% elif booking.dance_style_id == 29 %}
 
                     {% include 'dances/_thriller.html' %}
+
+                {% elif booking.dance_style_id == 30 %}
+
+                    {% include 'dances/_irish.html' %}
 
                 {% endif %}
 
