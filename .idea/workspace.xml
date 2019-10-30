@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookings/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookings/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,16 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/danceuk/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="244">
@@ -37,10 +28,22 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookings/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="1215">
               <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bookings/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,7 +174,6 @@
         <option value="$PROJECT_DIR$/bookings/urls.py" />
         <option value="$PROJECT_DIR$/danceuk/urls.py" />
         <option value="$PROJECT_DIR$/templates/teachers/teachers-detail.html" />
-        <option value="$PROJECT_DIR$/bookings/views.py" />
         <option value="$PROJECT_DIR$/templates/cities/venue-detail.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -185,6 +187,7 @@
         <option value="$PROJECT_DIR$/bookings/models.py" />
         <option value="$PROJECT_DIR$/templates/partials/_dances_common.html" />
         <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
+        <option value="$PROJECT_DIR$/bookings/views.py" />
       </list>
     </option>
   </component>
@@ -220,19 +223,7 @@
             <path>
               <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="dances" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
+              <item name="bookings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,8 +275,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37619048" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37619048" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -510,16 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookings/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/teachers/teachers-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -640,9 +621,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="276" column="36" selection-start-line="276" selection-start-column="36" selection-end-line="276" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bookings/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="1215">
           <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -650,10 +638,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
+    <entry file="file://$PROJECT_DIR$/bookings/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="276" column="36" selection-start-line="276" selection-start-column="36" selection-end-line="276" selection-end-column="36" />
+        <state relative-caret-position="185">
+          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
