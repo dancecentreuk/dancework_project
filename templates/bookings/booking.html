@@ -332,7 +332,13 @@
                         {{ booking.venue_3.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_3.postcode }}<br><br>
-                        Venue Cost: £{{ booking.venue_3.cost }} ph
+                        Venue Cost: £{{ booking.venue_3.cost }} ph <br>
+                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                        + Venue cost £{{ booking.studio_cost_3 }}
+                        {% if booking.discount %}
+                            - Discount £{{ booking.discount }}
+                        {% endif %}
+                        = {{ booking.provisional_total_3 }}
 
                     {% endif %}
 
@@ -343,7 +349,13 @@
                         {{ booking.venue_4.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_4.postcode }}<br><br>
-                        Venue Cost: £{{ booking.venue_4.cost }} ph
+                        Venue Cost: £{{ booking.venue_4.cost }} ph <br>
+                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                        + Venue cost £{{ booking.studio_cost_4 }}
+                        {% if booking.discount %}
+                            - Discount £{{ booking.discount }}
+                        {% endif %}
+                        = {{ booking.provisional_total_4 }}
 
 
                     {% endif %}

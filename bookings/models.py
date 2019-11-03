@@ -77,6 +77,19 @@ class Booking(models.Model):
             return 0
 
 
+    def studio_cost_3(self):
+        if self.venue_3:
+            return self.venue_3.cost * self.booking_quantity
+        else:
+            return 0
+
+    def studio_cost_4(self):
+        if self.venue_4:
+            return self.venue_4.cost * self.booking_quantity
+        else:
+            return 0
+
+
 
 
     def studio_cost(self):
@@ -104,6 +117,14 @@ class Booking(models.Model):
 
     def provisional_total_2(self):
         return self.studio_cost_2() + self.workshop_cost() - self.discount
+
+
+    def provisional_total_3(self):
+        return self.studio_cost_3() + self.workshop_cost() - self.discount
+
+
+    def provisional_total_4(self):
+        return self.studio_cost_4() + self.workshop_cost() - self.discount
 
 
 
