@@ -63,6 +63,14 @@ class Booking(models.Model):
 
 
 
+    def studio_cost_1(self):
+        if self.venue_1:
+            return self.venue_1.cost * self.booking_quantity
+        else:
+            return 0
+
+
+
 
     def studio_cost(self):
         if self.confirmed_venue:
@@ -80,6 +88,12 @@ class Booking(models.Model):
 
     def book_before_discount(self):
         return self.cost - self.discount
+
+
+
+    def provisional_total(self):
+        return self.studio_cost_1() + self.workshop_cost() - self.discount
+
 
 
 

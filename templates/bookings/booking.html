@@ -308,8 +308,14 @@
                     <p>LOCATION 2 <br><strong>Dance Hen Parties @</strong><br>
                         {{ booking.venue_2.address}}<br>
                         {{ booking.city }}<br>
-                        {{ booking.venue_2.postcode }}<br><br>
-                        Venue Cost: £{{ booking.venue_2.cost }} ph
+                        {{ booking.venue_2.postcode }}<br>
+                        Venue Cost: £{{ booking.venue_2.cost }} ph <br>
+                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                        + Venue cost £{{ booking.studio_cost }}
+                        {% if booking.discount %}
+                            - Discount £{{ booking.discount }}
+                        {% endif %}
+                        = {{ booking.total_cost }}
 
                     {% endif %}
 
