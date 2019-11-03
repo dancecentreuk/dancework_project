@@ -297,8 +297,14 @@
                     Dance Hen Parties @ <br>
                     {{ booking.venue_1.address}}<br>
                     {{ booking.city }}<br>
-                    {{ booking.venue_1.postcode }}<br><br>
-                     Venue Cost: £{{ booking.venue_1.cost }} ph <br> <br>
+                    {{ booking.venue_1.postcode }}<br>
+                     Venue Cost: £{{ booking.venue_1.cost }} ph <br>
+                    Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                        + Venue cost £{{ booking.studio_cost_1 }}
+                        {% if booking.discount %}
+                            - Discount £{{ booking.discount }}
+                        {% endif %}
+                        = {{ booking.provisional_total }}
 
 
 
