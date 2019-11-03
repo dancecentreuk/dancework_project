@@ -304,7 +304,7 @@
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = {{ booking.provisional_total }}
+                        = {{ booking.provisional_total_1 }}
 
 
 
@@ -317,11 +317,11 @@
                         {{ booking.venue_2.postcode }}<br>
                         Venue Cost: £{{ booking.venue_2.cost }} ph <br>
                         Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
-                        + Venue cost £{{ booking.studio_cost_1 }}
+                        + Venue cost £{{ booking.studio_cost_2 }}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = {{ booking.provisional_total }}
+                        = {{ booking.provisional_total_2 }}
 
                     {% endif %}
 
