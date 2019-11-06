@@ -27,7 +27,7 @@ def bookings(request):
     today = datetime.today()
     bookings = Booking.objects.filter(event_date__gte=today).order_by('event_date')
 
-    paginator = Paginator(bookings, 15)
+    paginator = Paginator(bookings, 20)
     page = request.GET.get('page')
     paged_bookings = paginator.get_page(page)
 
