@@ -12,7 +12,7 @@ def index(request):
     bookings = Booking.objects.filter(is_advertised=True).filter(event_date__gte=today).order_by('event_date')
 
 
-    paginator = Paginator(bookings, 4)
+    paginator = Paginator(bookings, 15)
     page = request.GET.get('page')
     paged_bookings = paginator.get_page(page)
 
