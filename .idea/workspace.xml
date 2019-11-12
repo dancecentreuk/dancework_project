@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5318">
-              <caret line="1025" lean-forward="true" selection-start-line="1025" selection-end-line="1025" />
+            <state relative-caret-position="37">
+              <caret line="300" column="69" selection-start-line="300" selection-start-column="69" selection-end-line="300" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -40,7 +40,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookings/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
+            <state relative-caret-position="-169">
               <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
@@ -49,21 +49,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-113">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="-404">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookings/forms.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="choices.py" pinned="false" current-in-tab="false">
@@ -131,6 +126,8 @@
       <find>img</find>
       <find>disc</find>
       <find>cost</find>
+      <find>heading</find>
+      <find>ph</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,8 +185,8 @@
         <option value="$PROJECT_DIR$/bookings/models.py" />
         <option value="$PROJECT_DIR$/templates/dances/_dance.html" />
         <option value="$PROJECT_DIR$/bookings/views.py" />
-        <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
         <option value="$PROJECT_DIR$/pages/views.py" />
+        <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
       </list>
     </option>
   </component>
@@ -225,7 +222,7 @@
             <path>
               <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="bookings" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
@@ -288,8 +285,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37619048" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37619048" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -602,9 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookings/forms.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookings/choices.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -635,16 +629,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
+    <entry file="file://$PROJECT_DIR$/bookings/forms.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5318">
-          <caret line="1025" lean-forward="true" selection-start-line="1025" selection-end-line="1025" />
+        <state relative-caret-position="-404">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bookings/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
+        <state relative-caret-position="-169">
           <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
@@ -652,13 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="37">
+          <caret line="300" column="69" selection-start-line="300" selection-start-column="69" selection-end-line="300" selection-end-column="69" />
         </state>
       </provider>
     </entry>
