@@ -19,8 +19,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="1111" column="16" selection-start-line="1076" selection-start-column="12" selection-end-line="1111" selection-end-column="16" />
+            <state relative-caret-position="196">
+              <caret line="1077" column="101" selection-start-line="1077" selection-start-column="101" selection-end-line="1077" selection-end-column="101" />
               <folding>
                 <element signature="e#21021#25729#0#HTML" />
                 <element signature="e#25732#26460#0#HTML" />
@@ -661,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="1111" column="16" selection-start-line="1076" selection-start-column="12" selection-end-line="1111" selection-end-column="16" />
+        <state relative-caret-position="196">
+          <caret line="1077" column="101" selection-start-line="1077" selection-start-column="101" selection-end-line="1077" selection-end-column="101" />
           <folding>
             <element signature="e#21021#25729#0#HTML" />
             <element signature="e#25732#26460#0#HTML" />
