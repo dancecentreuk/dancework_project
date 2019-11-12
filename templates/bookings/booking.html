@@ -1042,6 +1042,86 @@
 
 
   </div>
+
+      <div class="card">
+    <div class="card-header" id="headingThirteen">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+          BOOKING TEXT REPLY
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
+      <div class="card-body">
+
+
+<!--booking TEXT Reply-->
+      <div class="deodrant">
+
+
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+
+
+            <p>Hi {{ booking.name }}, weve sent an email to {{ booking.email }} <br>
+                provisionally booking your
+            </p>
+
+            <p> {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
+                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}
+
+            </p>
+
+
+            <p>
+                Ps make sure times dates are correct also ps confirm we have the correct address <br>
+                If You can confirm your booking  via the deposit your booking will be finalised <br>
+                Kind Regards <br>
+                James  Cooke <br>
+                Dance Hen Parties <br>
+
+            </p>
+
+            <p> {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
+                {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}
+            </p>
+
+            <p>
+                Name of Special Person : {{ booking.special_person | capfirst }}
+            </p>
+
+            <p>
+                Location <br>
+                Dance Hen Parties @ <br>
+                {{ booking.confirmed_venue.address }} <br>
+                {{ booking.confirmed_venue.city }} <br>
+                {{ booking.confirmed_venue.postcode }} <br>
+            </p>
+
+            <p>
+                What to Wear <br>
+                Comfortable clothes, trainers , <br>
+                The more outrageous the better
+            </p>
+
+            <p>
+                Kind Regards <br>
+                Dance Hen Parties<br>
+                Admin Team
+            </p>
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+
+      </div>
+    </div>
+  </div>
+
     <div class="card">
     <div class="card-header" id="headingSix">
       <h5 class="mb-0">
