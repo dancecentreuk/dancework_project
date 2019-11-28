@@ -1736,6 +1736,73 @@
     </div>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+     <div class="card">
+    <div class="card-header" id="headingFourteen">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+          Black Friday
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
+      <div class="card-body">
+         <p>
+
+
+             Hi {{ booking.name }}, <br>
+             Hope you are well. <br>
+             Just a  follow up on the email we sent in regards to your enquiry on the following booking . <br><br>
+
+             {{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }} on
+             {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}<br>
+
+
+             We still have availability on that day. <br><br>
+
+             <span class="exsadie">WHATS MORE WE ARE OFFERING A FURTHER £10  OF YOUR CURRENT QUOTE IF BOOKED BEFORE THE 6TH OF NOVEMBER <br>
+                 PLUS YOU CAN SECURE THE BOOKING WITH A  £30 DEPOSIT</span> <br><br>
+
+
+             For Instructor and venue<br>
+
+                    <ul>
+                        <ol>
+                            1 hr dance party your party is £{{ booking.cost|add:"-25" }} - £{{ booking.discount }} Booking discount - <span class="exsadie"> £10 Black Friday special</span>  + the cost of the venue  <br>
+                            = £{{booking.black_friday_1  }} + venue cost
+
+                        </ol>
+            OR
+                        <ol>
+                            1.5hr dance Party your party is £{{ booking.cost }}- £{{ booking.discount }} Booking discount -<span class="exsadie"> £10 Black Friday special</span> + the cost of the venue  <br>
+                            = £{{booking.black_friday  }} + venue cost
+                        </ol>
+
+
+
+                    </ul>
+
+          Kind Regards <br>
+          Dance Hen Parties <br>
+          Admin Team <br>
+
+
+
+         </p>
+      </div>
+    </div>
+  </div>
+
     <div class="card">
     <div class="card-header" id="headingEleven">
       <h5 class="mb-0">

@@ -100,10 +100,15 @@ class Booking(models.Model):
 
     def workshop_cost(self):
         if self.booking_quantity == 1:
-            return self.cost - 30
+            return self.cost - 25
         else:
             if self.booking_quantity == 1.5:
                 return self.cost
+
+
+    def workshop_cost_1h(self):
+            return self.cost - 25
+
 
 
     def book_before_discount(self):
@@ -134,6 +139,12 @@ class Booking(models.Model):
 
     def total_cost(self):
         return self.studio_cost() + self.workshop_cost() - self.discount
+
+    def black_friday(self):
+        return self.workshop_cost() - self.discount - 10
+
+    def black_friday_1(self):
+        return self.workshop_cost_1h() - self.discount - 10
 
     def balance(self):
         return self.total_cost() - 50
