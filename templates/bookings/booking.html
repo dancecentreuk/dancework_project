@@ -1749,6 +1749,75 @@
 
 
 
+    <div class="card">
+    <div class="card-header" id="headingSixteen">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+          web code
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion">
+      <div class="card-body">
+
+
+
+
+          <p style="text-align: center;"><strong>{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }} <br>
+ {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}}
+</strong></p><br>
+<p style="text-align: center;">Name of Hen: {{ booking.special_person }}
+
+</p>
+<p style="text-align: center;"><strong>Location</strong><br>
+Dance Hen Parties @<br>
+{{ booking.confirmed_venue.address}}<br>
+    {{ booking.city }} <br>
+    {{ booking.confirmed_venue.postcode }}</p><br>
+&nbsp;
+<p style="text-align: center;"><strong>Ideas on What to Wear </strong><br>
+comfortable clothing trainers for your feet<br>
+the more outrageouse the better</p><br>
+
+
+<hr />
+<p style="text-align: left;">Deposit : £50 via bank transfer or Paypal</p><br>
+
+
+<hr />
+<p style="text-align: left;">Balance : £{{ booking.balance | floatformat:2 }}  paid up to 2 days before the booking</p><br>
+
+
+<hr />
+<p style="text-align: left;">Bubbly : not Included</p>
+
+
+<hr />
+<p style="text-align: left;">Click link below to pay the deposit</p>
+
+
+<hr /><br>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal"><input name="cmd" type="hidden" value="_s-xclick" />
+<input name="hosted_button_id" type="hidden" value="53SVJY73F9REA" />
+<input alt="PayPal – The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" type="image" />
+<img src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" alt="" width="1" height="1" border="0" /></form>
+
+<hr /><br>
+
+<strong>Total : £{{ booking.total_cost | floatformat:2 }} </strong>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
 
 
