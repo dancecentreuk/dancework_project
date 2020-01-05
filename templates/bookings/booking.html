@@ -228,7 +228,14 @@
         <div class="container" >
 
 
-
+            <p class="mt-5">
+                {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on
+                    {{ booking.event_date|date:"l dS F Y" }}
+                {% if booking.start_time %}
+                from {{ booking.start_time }} - {{ booking.end_time }}
+                {% else %}
+                {% endif %}
+            </p>
 
             <p class="mt-5">Hi {{ booking.name }}, <br>
 
@@ -521,7 +528,7 @@
                 </tr>
                 <tr>
                     <th> No of People :</th>
-                    <td>aproximately {{ booking.group_size }} (You can have as many people as you like)</td>
+                    <td>approximately {{ booking.group_size }} (You can have as many people as you like)</td>
                 </tr>
               </tbody>
             </table>
@@ -724,7 +731,7 @@
                 <p><span class="exsadie">We currently have a special offer where  you can have as many people as you like at a  set price. (this is the same price we charge the hen party companies) !!
                     <br>
                     {% if booking.discount %}
-                    Further more if booked before  {{ booking.book_before_date|date:"l jS   F Y" }}. You will get a  further £{{ booking.discount }} off the price of the party
+                    Further more if booked before  {{ booking.book_before_date|date:"l jS   F Y" }}. You will get a  further £{{ booking.discount }} off the price of a 1.5hr  party
                     {% endif %}<br><br>
 
                     For Instructor and venue</span><br>
