@@ -255,7 +255,7 @@
 
 
                     {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
-                    {{ booking.event_date|date:"l dS F Y" }} from {{ booking.start_time }} - {{ booking.end_time }}<br> </span>
+                    {{ booking.event_date|date:"l dS F Y" }} from {{ booking.start_time }} - {{ booking.end_time }} or any other time through the day<br> </span>
 
                   We have a dance studio which is situated in the city centre in {{ booking.city }}</p>
 
@@ -263,7 +263,7 @@
             <br>
                 <p><span class="exsadie">We currently have a special offer where  you can have as many people as you like at a  set price. (this is the same price we charge the hen party companies) !! <br>
                     {% if booking.discount %}
-                    Further more if booked before  {{ booking.book_before_date|date:"l jS   F Y" }}. You will get a  further £{{ booking.discount }} off the price of the party
+                    Further more if booked before  {{ booking.book_before_date|date:"l jS   F Y" }}. You will get a  further £{{ booking.discount }} off the price of a 1.5hr  party
                     {% endif %}<br><br>
 
                     For Instructor and venue</span><br>
@@ -887,7 +887,7 @@
                           </span><br><br>
 
 
-                              www.dancehenparties.co.uk/bookings/hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+                              www.dancehenparties.co.uk/hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
                               <br>
 
                           </p><br>
