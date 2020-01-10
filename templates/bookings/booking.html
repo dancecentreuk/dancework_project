@@ -1094,11 +1094,15 @@
 
             <p> {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
                 {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}
-            </p>
+            </p> <br>
 
             <p>
-                Name of Special Person : {{ booking.special_person | capfirst }}
-            </p>
+                Name of Special Person : {% if booking.special_person %}
+                    {{ booking.special_person | capfirst }}
+                {% else %}
+                    Ps advise
+                {% endif %}
+            </p> <br>
 
             <p>
                 Location <br>
@@ -1106,18 +1110,18 @@
                 {{ booking.confirmed_venue.address }} <br>
                 {{ booking.confirmed_venue.city }} <br>
                 {{ booking.confirmed_venue.postcode }} <br>
-            </p>
+            </p> <br>
 
             <p>
                 What to Wear <br>
                 Comfortable clothes, trainers , <br>
                 The more outrageous the better
-            </p>
+            </p> <br>
 
             <p>
                 Kind Regards <br>
                 Dance Hen Parties<br>
-                Admin Team
+                Admin Team <br>
                 www.dancehenparties.co.uk
             </p>
 

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dances/_greatest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dances/_greatest.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,8 +40,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="1092" column="21" selection-start-line="1092" selection-start-column="21" selection-end-line="1092" selection-end-column="21" />
+            <state relative-caret-position="231">
+              <caret line="1103" column="27" lean-forward="true" selection-start-line="1103" selection-start-column="27" selection-end-line="1103" selection-end-column="27" />
               <folding>
                 <element signature="e#61938#61965#0#HTML" expanded="true" />
                 <element signature="e#62080#62107#0#HTML" expanded="true" />
@@ -266,8 +265,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -627,8 +626,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="1092" column="21" selection-start-line="1092" selection-start-column="21" selection-end-line="1092" selection-end-column="21" />
+        <state relative-caret-position="231">
+          <caret line="1103" column="27" lean-forward="true" selection-start-line="1103" selection-start-column="27" selection-end-line="1103" selection-end-column="27" />
           <folding>
             <element signature="e#61938#61965#0#HTML" expanded="true" />
             <element signature="e#62080#62107#0#HTML" expanded="true" />
