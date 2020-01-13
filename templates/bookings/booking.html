@@ -1824,6 +1824,489 @@ the more outrageouse the better</p><br>
 
 
 
+    {% if booking.dance_style_id == 31 %}
+
+
+      <div class="card">
+    <div class="card-header" id="headingTwenty">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="true" aria-controls="collapseTwenty">
+          INITIAL ENQUIRY EMAIL REPLY ALL DANCES
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseTwenty" class="collapse show" aria-labelledby="headingTwenty" data-parent="#accordion">
+      <div class="deodrant"  >
+
+
+<div class="email-reply ">
+        <div class="container" >
+
+
+            <p class="mt-5">
+                {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on
+                    {{ booking.event_date|date:"l dS F Y" }}
+                {% if booking.start_time %}
+                from {{ booking.start_time }} - {{ booking.end_time }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <p class="mt-5">Hi {{ booking.name }}, <br>
+
+                {% if booking.initial_chat %}
+                    As per our conversation, <br>
+                {% else %}
+                    {%  if not booking.phone %}
+                        do you have a  contact mobile number you can email over. <br> Alternatively
+                    {% else  %}
+                      we tried to get in contact with you earlier on <br>
+                    {% endif %}
+                {% endif %}
+            you can get in contact with James our hen party coordinator on 07846518558</p>
+
+
+                <p>we are able to accommodate you for your <br><span class="smallbold">
+
+
+                    {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
+                    {{ booking.event_date|date:"l dS F Y" }} from {{ booking.start_time }} - {{ booking.end_time }} or any other time through the day<br> </span>
+
+                  We have a dance studio which is situated in the city centre in {{ booking.city }}</p>
+
+                <p>With over 2000 dance hen parties under our belt we run hen parties for many of the large hen party companies in the uk on a weekly basis </p>
+            <br>
+                <p><span class="exsadie">We currently have a special offer where  you can have as many people as you like at a  set price. (this is the same price we charge the hen party companies) !! <br>
+                    {% if booking.discount %}
+                    Further more if booked before  {{ booking.book_before_date|date:"l jS   F Y" }}. You will get a  further £{{ booking.discount }} off the price of a 1.5hr  party
+                    {% endif %}<br><br>
+
+                    For Instructor and venue</span><br>
+
+                    <ul>
+                        <ol>
+                            1 hr dance party your party is £{{ booking.cost|add:"-25" }} / £{{ booking.cost|add:"-15" }}  + the cost of the venue (from £20ph) <br>
+
+                        </ol>
+            OR
+                        <ol>
+                            1.5hr dance Party your party is £{{ booking.cost }} / £{{ booking.cost | add:"10" }} + the cost of the venue  (from £20ph) <br>
+
+                        </ol>
+
+
+                        {% if booking.discount %}
+                            <br><br> Discount <br>
+                            plus an additional  £{{ booking.discount }} off !!  a 1.5 hr Dance workshop if booked before the {{ booking.book_before_date|date:"l jS   F Y" }} <br>
+                        {% endif %}
+                    <ol>
+                                                1.5hr dance Party your party is £{{ booking.book_before_discount }} / £{{ booking.book_before_discount | add:"10" }} + the cost of the venue  (from £20ph) <br>
+
+                    </ol>
+                    </ul>
+
+
+
+
+                <p>On booking there is a  £50 deposit to secure the dance studio   and the balance is paid up 2  days  before the workshop <br>
+                </p><br><br>
+
+              <p class="exsadie">LOCATIONS</p>
+
+
+
+                <p>LOCATION 1 <br>
+                    Dance Hen Parties @ <br>
+                    {{ booking.venue_1.address}}<br>
+                    {{ booking.city }}<br>
+                    {{ booking.venue_1.postcode }}<br>
+                     Venue Cost: £{{ booking.venue_1.cost }} per hour <br>
+                    Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }} / £{{ booking.cost | add:"10" }}
+                        + Venue cost £{{ booking.studio_cost_1 }}
+                        {% if booking.discount %}
+                            - Discount £{{ booking.discount }}
+                        {% endif %}
+                        = £{{ booking.provisional_total_1 }} / £{{ booking.provisional_total_1 | add:"10"}}
+
+
+
+                    {% if booking.venue_2 %}
+
+
+                    <p>LOCATION 2 <br><strong>Dance Hen Parties @</strong><br>
+                        {{ booking.venue_2.address}}<br>
+                        {{ booking.city }}<br>
+                        {{ booking.venue_2.postcode }}<br>
+                        Venue Cost: £{{ booking.venue_2.cost }} per hour <br>
+                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }} / £{{ booking.cost | add:"10" }}
+                        + Venue cost £{{ booking.studio_cost_2 }}
+                        {% if booking.discount %}
+                            - Discount £{{ booking.discount }}
+                        {% endif %}
+                        = £{{ booking.provisional_total_2 }} / £{{ booking.provisional_total_2 | add:"10"}}
+
+                    {% endif %}
+
+                 {% if booking.venue_3 %}
+
+
+                    <p>LOCATION 3 <br><strong>Dance Hen Parties @</strong><br>
+                        {{ booking.venue_3.address}}<br>
+                        {{ booking.city }}<br>
+                        {{ booking.venue_3.postcode }}<br>
+                        Venue Cost: £{{ booking.venue_3.cost }} per hour <br>
+                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }} / £{{ booking.cost | add:"10" }}
+                        + Venue cost £{{ booking.studio_cost_3 }}
+                        {% if booking.discount %}
+                            - Discount £{{ booking.discount }}
+                        {% endif %}
+                        = £{{ booking.provisional_total_3 }} / £{{ booking.provisional_total_3 | add:"10"}}
+
+                    {% endif %}
+
+                 {% if booking.venue_4 %}
+
+
+                    <p>LOCATION 4 <br><strong>Dance Hen Parties @</strong><br>
+                        {{ booking.venue_4.address}}<br>
+                        {{ booking.city }}<br>
+                        {{ booking.venue_4.postcode }}<br>
+                        Venue Cost: £{{ booking.venue_4.cost }} per hour <br>
+                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }} / £{{ booking.cost | add:"10" }}
+                        + Venue cost £{{ booking.studio_cost_4 }}
+                        {% if booking.discount %}
+                            - Discount £{{ booking.discount }}
+                        {% endif %}
+                        = £{{ booking.provisional_total_4 }} / £{{ booking.provisional_total_4 | add:"10"}}
+
+
+                    {% endif %}
+
+
+
+        <p>
+            <span class="exsadie">Why book with us</span> <br>
+
+            <ul>
+            <li>
+                Avoid the middle companies  . we deliver the hen party for the hen party companies. They buy the product of us and charge you extra.
+
+            </li>
+            <li>
+                We charge a  set price for your instructor  so no matter how many people your hen party cost does not go up
+
+            </li>
+            <li>
+                The deposit is only £50 to secure the venue
+
+            </li>
+            <li>
+                The Balance is not due till 3 days before your booking
+
+            </li>
+            <li>
+                You get to know which venue you are booked into before you confirm your booking so you can plan your activities and not have any last minute shocks and  be sent to an out of the city location or to a different type of venue ie a  bar if you wanted a  studio or vice versa
+
+            </li>
+            <li>
+                We give you your instructors contact detail a week before your workshop so you can contact them and personalise your party .
+            </li>
+            <li>
+                You can customise your party to suit your group requirements
+
+            </li>
+        </ul>
+
+        </p>
+
+
+
+        <section>
+            <div class="container">
+                <img class="" src="{% static 'img/dancehemparties_ad.jpg' %}" alt="">
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p class="exsadie"> These are the details we have for you....  to help us assist you more efficiently we need the following details </p>
+            <br>
+
+
+                    {% if not booking.phone %}
+                        1.)  A contact  mobile number <br>
+                    {% endif %}
+
+                     {% if not booking.special_person %}
+                        2.) the name of the Special person ( ie bride,  stag or birthday person ) <br>
+                    {% endif %}
+
+                    {% if not booking.city %}
+                        3.) city your dance party is taking place <br>
+                    {% endif %}
+
+                    {% if not booking.event_date %}
+                        4.) Your preferred date for your dance party <br>
+                    {% endif %}
+
+                    {% if not booking.event_length %}
+                        5.) Your preferred length for your dance party
+                    {% endif %}
+
+                   {% if not booking.start_time %}
+                        6.) Your preferred time for your dance workshop <br>
+                    {% endif %}
+
+                    {% if not booking.group_size %}
+                        7.) an approximate number of guests <br>
+                    {% endif %}
+
+                    {% if not booking.dance_style %}
+                     8.) Your preferred dance style <br><br><br>
+
+                    {% endif %}
+
+                <br>
+
+
+
+
+
+
+
+
+<div class="col-lg-8">
+
+                <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Date Queried</th>
+                  <th scope="col">{{ booking.enquiry_date  }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Organiser</th>
+                  <td>{{ booking.name }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Name of Hen :</th>
+                  <td>{{ booking.special_person }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Contact Mobile</th>
+                  <td colspan="2">{{ booking.phone }}</td>
+                </tr>
+                <tr>
+                    <th>Email :</th>
+                    <td>{{ booking.email }}</td>
+                </tr>
+                <tr>
+                    <th>City :</th>
+                    <td>{{ booking.city }}</td>
+                </tr>
+                <tr>
+                    <th>Date of Event :</th>
+                    <td>{{ booking.event_date|date:"l dS F Y" }}</td>
+                </tr>
+                <tr>
+                    <th>Time of Event :</th>
+                    <td>{{ booking.start_time }}-{{ booking.end_time  }}</td>
+                </tr>
+                <tr>
+                    <th>Dance Style :</th>
+                    <td>{{ booking.dance_style }}</td>
+                </tr>
+                <tr>
+                    <th>Price :</th>
+                    <td>
+                        1 hr dance party your party is £{{ booking.cost | add:"-25"  }} / £{{ booking.cost | add:"-15"  }}+ the cost of the venue (from £20ph) <br>
+                        1.5hr dance Party your party is £{{ booking.cost  }} / £{{ booking.cost | add:"10"  }} + the cost of the venue  (from £20ph) <br>
+                        <br>
+
+                        {% if booking.discount %}
+                            Discount <br>
+                            plus an additional  £{{ booking.discount }} off !!  a 1.5 hr Dance workshop if booked before the {{ booking.book_before_date|date:"l jS   F Y" }} <br>
+                        {% endif %}
+                        1.5hr dance Party your party is £{{ booking.book_before_discount }} / £{{ booking.book_before_discount | add:"10"}} + the cost of the venue  (from £20ph) <br>
+                    </td>
+                </tr>
+                <tr>
+                    <th> No of People :</th>
+                    <td>approximately {{ booking.group_size }} (You can have as many people as you like)</td>
+                </tr>
+              </tbody>
+            </table>
+    <br>
+</div>
+
+            <p>Kind regards <br>
+                Dance Hen Parties  <br>
+                Admin Team <br>
+                www.dancehenparties.co.uk
+            </p><br>
+
+
+
+
+            {% if booking.dance_style_id == 1 %}
+
+                    {% include 'dances/_80s.html' %}
+
+
+                {% elif booking.dance_style_id == 2  %}
+
+                    {% include 'dances/_90s.html' %}
+
+                {% elif booking.dance_style_id == 3 %}
+
+                    {% include 'dances/_abba.html' %}
+
+                {% elif booking.dance_style_id == 4 %}
+
+                    {% include 'dances/_belly.html' %}
+
+                {% elif booking.dance_style_id == 5 %}
+
+                    {% include 'dances/_beyonce.html' %}
+
+                {% elif booking.dance_style_id == 6 %}
+
+                    {% include 'dances/_bollywood.html' %}
+
+                {% elif booking.dance_style_id == 7 %}
+
+                    {% include 'dances/_britney.html' %}
+
+                {% elif booking.dance_style_id == 8 %}
+
+                    {% include 'dances/_burlesque.html' %}
+
+                {% elif booking.dance_style_id == 9 %}
+
+                    {% include 'dances/_charleston.html' %}
+
+                {% elif booking.dance_style_id == 10 %}
+
+                    {% include 'dances/_cheerleading.html' %}
+
+                {% elif booking.dance_style_id == 11 %}
+
+                    {% include 'dances/_chicago.html' %}
+
+                {% elif booking.dance_style_id == 12 %}
+
+                    {% include 'dances/_commercial.html' %}
+
+                {% elif booking.dance_style_id == 13 %}
+
+                    {% include 'dances/_dirty_dancing.html' %}
+
+                {% elif booking.dance_style_id == 14 %}
+
+                    {% include 'dances/_disney.html' %}
+
+                {% elif booking.dance_style_id == 15 %}
+
+                    {% include 'dances/_fame.html' %}
+
+                {% elif booking.dance_style_id == 16 %}
+
+                    {% include 'dances/_flamenco.html' %}
+
+                {% elif booking.dance_style_id == 17 %}
+
+                    {% include 'dances/_flash.html' %}
+
+                {% elif booking.dance_style_id == 18 %}
+
+                    {% include 'dances/_grease.html' %}
+
+                {% elif booking.dance_style_id == 19 %}
+
+                    {% include 'dances/_greatest.html' %}
+
+                {% elif booking.dance_style_id == 20 %}
+
+                    {% include 'dances/_abba.html' %}
+
+                {% elif booking.dance_style_id == 21 %}
+
+                    {% include 'dances/_musicals.html' %}
+
+                {% elif booking.dance_style_id == 22 %}
+
+                    {% include 'dances/_pole.html' %}
+
+                {% elif booking.dance_style_id == 23 %}
+
+                    {% include 'dances/_commercial.html' %}
+
+                {% elif booking.dance_style_id == 24 %}
+
+                    {% include 'dances/_salsa.html' %}
+
+                {% elif booking.dance_style_id == 25 %}
+
+                    {% include 'dances/_samba.html' %}
+
+                {% elif booking.dance_style_id == 26 %}
+
+                    {% include 'dances/_spice.html' %}
+
+                {% elif booking.dance_style_id == 27 %}
+
+                    {% include 'dances/_street.html' %}
+
+                {% elif booking.dance_style_id == 28 %}
+
+                    {% include 'dances/_strictly.html' %}
+
+                {% elif booking.dance_style_id == 29 %}
+
+                    {% include 'dances/_thriller.html' %}
+
+                {% elif booking.dance_style_id == 30 %}
+
+                    {% include 'dances/_irish.html' %}
+
+                {% elif booking.dance_style_id == 31 %}
+
+                    {% include 'dances/_dance.html' %}
+
+                {% endif %}
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+{% endif %}
+
+
+
+
 
 
 
