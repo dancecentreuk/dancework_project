@@ -31,8 +31,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="1590" column="153" selection-start-line="1590" selection-start-column="153" selection-end-line="1590" selection-end-column="153" />
+            <state relative-caret-position="243">
+              <caret line="1587" lean-forward="true" selection-start-line="1587" selection-end-line="1587" />
             </state>
           </provider>
         </entry>
@@ -317,8 +317,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -668,8 +668,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="1590" column="153" selection-start-line="1590" selection-start-column="153" selection-end-line="1590" selection-end-column="153" />
+        <state relative-caret-position="243">
+          <caret line="1587" lean-forward="true" selection-start-line="1587" selection-end-line="1587" />
         </state>
       </provider>
     </entry>
