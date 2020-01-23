@@ -107,7 +107,15 @@ def search(request):
 
 
 
+    if 'clients_name' in request.GET:
+        clients_name = request.GET['clients_name']
+        if clients_name:
+            queryset_list = queryset_list.filter(name__icontains=clients_name)
 
+    if 'clients_email' in request.GET:
+        clients_email = request.GET['clients_email']
+        if clients_email:
+            queryset_list = queryset_list.filter(email__icontains=clients_email)
 
 
     if 'booking_emailed' in request.GET:
