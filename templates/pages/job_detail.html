@@ -47,7 +47,14 @@
                         </tr>
                         <tr>
                           <th scope="row">Contact Person</th>
-                          <td> reference {{ booking.id }}</td>
+                          <td> reference {{ booking.id }}
+
+                              {% if user.is_staff %}
+                                  {{ booking.name }}
+                              {% endif %}
+
+
+                          </td>
                         </tr>
 
                         <tr>

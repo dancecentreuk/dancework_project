@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/job_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/job_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/job_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/job_search.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,8 +87,8 @@
       <file leaf-file-name="job_detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/pages/job_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+            <state relative-caret-position="342">
+              <caret line="52" column="49" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -321,8 +319,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -691,8 +689,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/job_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+        <state relative-caret-position="342">
+          <caret line="52" column="49" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
         </state>
       </provider>
     </entry>
