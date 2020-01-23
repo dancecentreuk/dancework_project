@@ -75,8 +75,8 @@
       <file leaf-file-name="job_detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/pages/job_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="125" column="10" selection-start-line="125" selection-start-column="10" selection-end-line="125" selection-end-column="10" />
+            <state relative-caret-position="358">
+              <caret line="132" column="15" lean-forward="true" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -320,8 +320,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -682,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/job_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="125" column="10" selection-start-line="125" selection-start-column="10" selection-end-line="125" selection-end-column="10" />
+        <state relative-caret-position="358">
+          <caret line="132" column="15" lean-forward="true" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="15" />
         </state>
       </provider>
     </entry>
