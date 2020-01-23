@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/pages/job_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/job_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,18 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookings/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="117" column="79" selection-start-line="117" selection-start-column="79" selection-end-line="117" selection-end-column="79" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookings/models.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -40,10 +28,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="1590" column="153" selection-start-line="1590" selection-start-column="153" selection-end-line="1590" selection-end-column="153" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="bookings.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bookings/bookings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="-1292">
               <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
             </state>
           </provider>
@@ -72,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="job_detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="job_detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/pages/job_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="358">
@@ -179,12 +176,12 @@
         <option value="$PROJECT_DIR$/bookings/admin.py" />
         <option value="$PROJECT_DIR$/templates/dances/_street.html" />
         <option value="$PROJECT_DIR$/templates/dances/_line.html" />
-        <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
         <option value="$PROJECT_DIR$/bookings/views.py" />
         <option value="$PROJECT_DIR$/templates/bookings/bookings.html" />
         <option value="$PROJECT_DIR$/templates/pages/index.html" />
         <option value="$PROJECT_DIR$/templates/pages/job_search.html" />
         <option value="$PROJECT_DIR$/templates/pages/job_detail.html" />
+        <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
       </list>
     </option>
   </component>
@@ -320,8 +317,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -559,24 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="747" column="14" lean-forward="true" selection-start-line="747" selection-start-column="14" selection-end-line="747" selection-end-column="14" />
-          <folding>
-            <element signature="e#61938#61965#0#HTML" expanded="true" />
-            <element signature="e#62080#62107#0#HTML" expanded="true" />
-            <element signature="e#62141#62168#0#HTML" expanded="true" />
-            <element signature="e#62281#62287#0#HTML" expanded="true" />
-            <element signature="e#62291#62318#0#HTML" expanded="true" />
-            <element signature="e#62465#62490#0#HTML" expanded="true" />
-            <element signature="e#62555#62580#0#HTML" expanded="true" />
-            <element signature="e#62658#62683#0#HTML" expanded="true" />
-            <element signature="e#62724#62749#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/urls.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -630,13 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookings/bookings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/pages/jobs.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -684,6 +656,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="132" column="15" lean-forward="true" selection-start-line="132" selection-start-column="15" selection-end-line="132" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookings/bookings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1292">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="1590" column="153" selection-start-line="1590" selection-start-column="153" selection-end-line="1590" selection-end-column="153" />
         </state>
       </provider>
     </entry>

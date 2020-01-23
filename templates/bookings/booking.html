@@ -1581,14 +1581,14 @@
                               Ps can you email the number of ladies in your group
                           </p>
 
-                          <p> Your instructor on the day is {{ booking.teacher }}<br>
-                              contact number is {{ booking.teacher.mobile }}
+                          <p> Your instructor on the day is {% if booking.teacher %} {{ booking.teacher }} {% else %} TBC {% endif %}<br>
+                              contact number is {% if booking.teacher %} {{ booking.teacher.mobile }} {% else %} TBC {% endif %}
 
                           </p>
 
                             <p>
-                                we have recieved your deposit of £50 Thank you. <br>
-                                if you can pay the balance of £{{ booking.balance|floatformat:'2'  }} via bank transfer
+                                we have received your deposit of £50 Thank you. <br>
+                                if you can pay the balance of £{{ booking.balance|floatformat:'2'  }} via bank transfer up to 2 days before your workshop
                                 <br>
                                 That would be great <br>
 
