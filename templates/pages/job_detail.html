@@ -8,9 +8,9 @@
             </div>
         </div>
     </div>
+    {% if booking.is_advertised %}
 
-
-     <div class="row">
+          <div class="row">
     <div class="col-12 col-sm-12 col-lg-9">
 
                   <button class="btn-info  btn-sm float-right mb-2 "  data-toggle="modal" data-target="#inquiryModal">Apply fot this Job</button>
@@ -19,10 +19,9 @@
     </div>
 </div>
 
+    {% else %}
 
-
-
-    <div class="booking-detail section">
+        <div class="booking-detail section">
     <div class="container" >
         <div class="row mx-auto">
             <div class="col-12 col-sm-12 col-lg-9 ">
@@ -125,6 +124,17 @@
 
     </div>
     </div>
+
+
+    {% endif %}
+
+
+
+
+
+
+
+
 
 
 
