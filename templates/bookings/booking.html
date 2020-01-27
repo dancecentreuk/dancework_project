@@ -872,6 +872,12 @@
       <div class="deodrant">
           <div class="container mt-5">
 
+              <br>Booking Hen Party Dance Class {{ booking.name | title }} {{ booking.city | title }} <br> <br>
+
+          <br>
+              hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
+              <br>
+
                <p> Hi {{ booking.name | title }}, <br>
                              We look forward to seeing your <br>
         <span class="smallbold">
@@ -1140,6 +1146,40 @@
       </div>
     </div>
   </div>
+
+
+     <div class="card">
+    <div class="card-header" id="headingSeventeen">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+          BOOK STUDIO
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordion">
+      <div class="card-body">
+         <p>
+
+             {% if booking.confirmed_venue.venue_email %}
+                 {{ booking.confirmed_venue.venue_email }} <br><br>
+                 {{ booking.confirmed_venue.venue_phone }}
+             {% endif %}
+
+             Hi {{ booking.confirmed_venue.venue_coordinator }}, Hope all is well. <br><br>
+             Ps can i confirm the booking of the studio on the following day and time <br><br>
+                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}<br><br>
+             Kind regards <br>
+             James <br>
+             07402919100 <br>
+         </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
     <div class="card">
     <div class="card-header" id="headingSix">
