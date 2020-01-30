@@ -311,7 +311,10 @@
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_1 }}
+                        = £{{ booking.provisional_total_1 }} <br>
+                    Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
+                        + Venue cost £{{ booking.venue_1.cost}}
+                        = £{{ booking.provisional_1hr_total_1 }}
 
 
 
@@ -947,7 +950,7 @@
                                   Third floor Suite 4 <br>
                                   40-42 John Dalton Street <br>
                                   Manchester <br>
-                                  M2 6LE <br>
+                                  M2 6LE <br><br>
                               </p>
                            </td>
 
@@ -977,7 +980,7 @@
         <thead>
           <tr>
 
-            <th>
+            <th class="text-left">
               <h5>Description</h5>
             </th>
             <th class="text-right">
@@ -987,22 +990,25 @@
         </thead>
         <tbody>
           <tr>
+              <br>
 
             <td>  <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
                 {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}} </span></p>
-           <p> Name of Special Person : {{ booking.special_person }}</p>
+           <p> Name of Special Person : {{ booking.special_person }}<br></p>
             <p><span class="blackbold">Location</span> <br>
 
                 Dance Hen Parties @ <br>
                 {{ booking.confirmed_venue.address}}<br>
                 {{ booking.city }} <br>
-                {{ booking.confirmed_venue.postcode }}
+                {{ booking.confirmed_venue.postcode }} <br><br>
 
             </p>
 
                         <p><span class="smallbold">Ideas on What to Wear </span> <br>
                             Trainers for your feet <br>
-                            Loose comfortable clothing on top</p>
+                            Loose comfortable clothing on top <br>
+                            The more outrageous the better
+                        </p>
 
                         <br><br>
                         </td>

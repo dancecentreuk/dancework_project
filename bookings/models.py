@@ -135,6 +135,13 @@ class Booking(models.Model):
 
 
 
+    def provisional_1hr_total_1(self):
+        return self.venue_1.cost + self.workshop_cost_1h()
+
+
+
+
+
 
 
     def total_cost(self):
