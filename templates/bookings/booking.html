@@ -950,7 +950,7 @@
                                   Third floor Suite 4 <br>
                                   40-42 John Dalton Street <br>
                                   Manchester <br>
-                                  M2 6LE <br><br>
+                                  M2 6LE <br>
                               </p>
                            </td>
 
@@ -990,17 +990,16 @@
         </thead>
         <tbody>
           <tr>
-              <br>
 
             <td>  <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
                 {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}} </span></p>
-           <p> Name of Special Person : {{ booking.special_person }}<br></p>
+           <p> Name of Special Person : {{ booking.special_person }}</p>
             <p><span class="blackbold">Location</span> <br>
 
                 Dance Hen Parties @ <br>
                 {{ booking.confirmed_venue.address}}<br>
                 {{ booking.city }} <br>
-                {{ booking.confirmed_venue.postcode }} <br><br>
+                {{ booking.confirmed_venue.postcode }}
 
             </p>
 
