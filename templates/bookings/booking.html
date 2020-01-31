@@ -331,7 +331,11 @@
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_2 }}
+                        = £{{ booking.provisional_total_2 }}<br>
+                        Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
+                        + Venue cost £{{ booking.venue_2.cost}}
+                        = £{{ booking.provisional_1hr_total_2 }}
+
 
                     {% endif %}
 
@@ -348,7 +352,10 @@
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_3 }}
+                        = £{{ booking.provisional_total_3 }}<br>
+                        Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
+                        + Venue cost £{{ booking.venue_3.cost}}
+                        = £{{ booking.provisional_1hr_total_3 }}
 
                     {% endif %}
 
@@ -365,7 +372,10 @@
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_4 }}
+                        = £{{ booking.provisional_total_4 }}<br>
+                        Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
+                        + Venue cost £{{ booking.venue_4.cost}}
+                        = £{{ booking.provisional_1hr_total_4 }}
 
 
                     {% endif %}
