@@ -1423,25 +1423,26 @@
                         <p>{{ booking.name }} <br>
                         {{ booking.phone }}</p>
 
-                        <p> on the day ps <br>
+                        <p><br>on the day ps <br>
                             1.) arrive 30 mins before  get set up <br>
                             2.) text me in the morning to let me know all is ok <br>
                             3.) Text me on arrival <br>
                             4.) Take Back up Music sytem or Cd if possible <br>
                             5.) Email invoice and text over Bank details so we can pay you <br>
                             6.)ps Take a photo of the group and send it to us at the end of the session <br>
-                            6.) HAVE FUN !!!! X </p>
+                            7.) HAVE FUN !!!! X <br><br></p>
 
                         <p> {{ booking.group_size }} ladies in the group <br>
                             (this is an estimate) ps confirm with group their number size <br>
-                            PAY {{ booking.teacher_fee }}ph</p>
+                            PAY  £{{ booking.teacher_fee }}</p><br>
 
                         <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }}<br>
                             {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time  }} - {{ booking.end_time  }} </p>
+                  <br>
 
-                        <p> Name Of Hen:  {{ booking.special_person }}</p>
+                        <p> Name Of Hen:  {{ booking.special_person }}</p><br>
 
-                        <p>Location</p>
+                        <p>Location</p><br>
 
                         <p>
                         {{ booking.confirmed_venue}}<br>
