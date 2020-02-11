@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/dances/_musicals.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dances/_musicals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cities/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/cities/choices.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,11 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_musicals.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_musicals.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dances/_musicals.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
+            <state relative-caret-position="222">
               <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="choices.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cities/choices.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -166,7 +175,6 @@
         <option value="$PROJECT_DIR$/templates/dances/_greatest.html" />
         <option value="$PROJECT_DIR$/templates/dances/_dance.html" />
         <option value="$PROJECT_DIR$/templates/dances/_spice.html" />
-        <option value="$PROJECT_DIR$/cities/choices.py" />
         <option value="$PROJECT_DIR$/bookings/admin.py" />
         <option value="$PROJECT_DIR$/templates/dances/_street.html" />
         <option value="$PROJECT_DIR$/templates/dances/_line.html" />
@@ -179,6 +187,7 @@
         <option value="$PROJECT_DIR$/bookings/models.py" />
         <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
         <option value="$PROJECT_DIR$/templates/dances/_musicals.html" />
+        <option value="$PROJECT_DIR$/cities/choices.py" />
       </list>
     </option>
   </component>
@@ -216,6 +225,11 @@
               <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
               <item name="accounts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
+              <item name="cities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
@@ -283,8 +297,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33492064" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -439,13 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="44" lean-forward="true" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cities/choices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -642,8 +649,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dances/_musicals.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
+        <state relative-caret-position="222">
           <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cities/choices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
         </state>
       </provider>
     </entry>

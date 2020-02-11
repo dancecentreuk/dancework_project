@@ -13,6 +13,7 @@ city_choices =[
     ('canterbury', 'Canterbury'),
     ('cardiff', 'Cardiff'),
     ('chelmsford', 'Chelmsford'),
+    ('cheltenham', 'Cheltenham'),
     ('chester', 'Chester'),
     ('coventry', 'Coventry'),
     ('darlington', 'Darlington'),
