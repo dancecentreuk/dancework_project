@@ -1269,9 +1269,10 @@
                     <h4>CUSTOMER DAY B4 BOOKING TEXT BALANCE PAID</h4> <br>
 
                         <p> Hi {{ booking.name }} <br>
-                            we look forward to your <br>
+                            we look forward to your <br><br>
                         {{ booking.dance_style }} hen party in {{ booking.city }} on <br>
-                        {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }} </p>
+                        {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}
+                            <br> <br></p>
 
                         <p>
                         ps can you email or text the number of ladies in your group <br><br>
@@ -1284,16 +1285,17 @@
 
 
                         <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }}<br>
-                            {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time  }} - {{ booking.end_time }} </p>
+                            {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time  }} - {{ booking.end_time }}
+                            <br><br></p>
 
-                        <p> Name Of Hen:  {{ booking.special_person }}</p>
+                        <p> Name Of Hen:  {{ booking.special_person }} <br><br></p>
 
-                        <p>Location</p>
+                        <p>Location <br><br></p>
 
                         <p> {{ booking.studio }}  @ <br>
                             {{ booking.confirmed_venue}} <br>
                             {{ booking.confirmed_venue.address}} <br>
-                            {{ booking.confirmed_venue.postcode}} <br>
+                            {{ booking.confirmed_venue.postcode}} <br><br>
                         </p>
 
                         <p>Ideas on What to Wear <br>
@@ -1310,39 +1312,39 @@
 
                     <p> Hi {{ booking.name}} weve sent an email to  {{ booking.email }} <br>
                     we look forward to your
-                        <br>
+                        <br><br>
                     {{ booking.dance_style }} hen party in {{ booking.city }} on <br>
-                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }}-{{ booking.end_time }} </p>
+                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }}-{{ booking.end_time }} <br><br></p>
                     <p>
                     ps can you email or text the number of ladies in your group <br>
                     your instructor on the day is {{ booking.teacher.first_name }}<br>
-                    <strong>contact number : </strong> {{ booking.teacher.mobile }}<br>
+                    <strong>contact number : </strong> {{ booking.teacher.mobile }}<br><br>
                     </p>
                     <p>
                     we have received your deposit of £50 Thank you <br>
                         if you can pay the balance of £{{ booking.balance }} via bank transfer up to 2 days before the workshop <br>
                         That would be great <br>
-                        weve sent you an email with bank details
+                        weve sent you an email with bank details <br><br>
 
                     </p>
 
                     <p>
                     kind regards <br>
                     Dance Hen Parties <br>
-                    admin team
+                    admin team <br><br>
                     </p>
 
                     <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }}<br>
-                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time}} </p>
+                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time}} <br><br> </p>
 
-                    <p> Name Of Special Person:  {{ booking.special_person }}</p>
+                    <p> Name Of Special Person:  {{ booking.special_person }} <br><br></p>
 
-                    <p>Location</p>
+                    <p>Location <br><br></p>
 
                     <p> Dance Hen Parties  @ <br>
                     {{ booking.confirmed_venue}} <br>
                     {{ booking.confirmed_venue.address}} <br>
-                    {{ booking.confirmed_venue.postcode}} <br>
+                    {{ booking.confirmed_venue.postcode}} <br><br>
                     </p>
 
                     <p>Ideas on What to Wear <br>
