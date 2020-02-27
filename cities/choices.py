@@ -43,6 +43,7 @@ city_choices =[
     ('preston', 'Preston'),
     ('reading', 'Reading'),
     ('retford', 'Retford'),
+    ('romford', 'Romford'),
     ('sheffield', 'Sheffield'),
     ('southampton', 'Southampton'),
     ('stockport', 'Stockport'),
