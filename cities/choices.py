@@ -44,6 +44,7 @@ city_choices =[
     ('reading', 'Reading'),
     ('retford', 'Retford'),
     ('romford', 'Romford'),
+    ('scarborough', 'Scarborough'),
     ('sheffield', 'Sheffield'),
     ('southampton', 'Southampton'),
     ('stockport', 'Stockport'),
