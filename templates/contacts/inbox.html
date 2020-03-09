@@ -60,6 +60,7 @@
       <th scope="col">#</th>
       <th scope="col">Booking id</th>
       <th scope="col">Name</th>
+      <th scope="col">Date</th>
       <th scope="col">Mobile</th>
       <th scope="col">City</th>
 
@@ -73,6 +74,7 @@
     <tr>
       <th scope="row">{{ message.id }}</th>
       <td><a href="{% url 'bookings:booking' message.booking_id %}">{{ message.booking_id}}</a></td>
+        <td>{{ message.booking.title }} </td>
         <td><a href="{% url 'contact:contact-details' message.id%}">{{ message.name}}</a></td>
       <td>{{ message.mobile }}</td>
       <td>{{ message.booking_city }}</td>
