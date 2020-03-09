@@ -2074,7 +2074,10 @@ the more outrageouse the better</p><br>
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_2 }} / £{{ booking.provisional_total_2 | add:"10"}}
+                        = £{{ booking.provisional_total_2 }} / £{{ booking.provisional_total_2 | add:"10"}}<br>
+                    Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }} / £{{ booking.cost | add:"-15"  }}
+                        + Venue cost £{{ booking.venue_2.cost}}
+                        = £{{ booking.provisional_1hr_total_2 }} / £{{ booking.provisional_1hr_total_2 | add:"10"  }}
 
                     {% endif %}
 
@@ -2091,7 +2094,10 @@ the more outrageouse the better</p><br>
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_3 }} / £{{ booking.provisional_total_3 | add:"10"}}
+                        = £{{ booking.provisional_total_3 }} / £{{ booking.provisional_total_3 | add:"10"}}<br>
+                    Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }} / £{{ booking.cost | add:"-15"  }}
+                        + Venue cost £{{ booking.venue_3.cost}}
+                        = £{{ booking.provisional_1hr_total_3 }} / £{{ booking.provisional_1hr_total_3 | add:"10"  }}
 
                     {% endif %}
 
@@ -2108,7 +2114,10 @@ the more outrageouse the better</p><br>
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_4 }} / £{{ booking.provisional_total_4 | add:"10"}}
+                        = £{{ booking.provisional_total_4 }} / £{{ booking.provisional_total_4 | add:"10"}}<br>
+                    Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }} / £{{ booking.cost | add:"-15"  }}
+                        + Venue cost £{{ booking.venue_4.cost}}
+                        = £{{ booking.provisional_1hr_total_4 }} / £{{ booking.provisional_1hr_total_4 | add:"10"  }}
 
 
                     {% endif %}
