@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="2062" lean-forward="true" selection-start-line="2062" selection-end-line="2062" />
+            <state relative-caret-position="230">
+              <caret line="2059" column="112" selection-start-line="2059" selection-start-column="112" selection-end-line="2059" selection-end-column="112" />
             </state>
           </provider>
         </entry>
@@ -612,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="2062" lean-forward="true" selection-start-line="2062" selection-end-line="2062" />
+        <state relative-caret-position="230">
+          <caret line="2059" column="112" selection-start-line="2059" selection-start-column="112" selection-end-line="2059" selection-end-column="112" />
         </state>
       </provider>
     </entry>
