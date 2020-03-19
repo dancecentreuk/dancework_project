@@ -1884,6 +1884,215 @@
 
 
 
+
+
+
+
+    <div class="card">
+    <div class="card-header" id="headingTwentyTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
+          Covid Transfer
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwentyTwo" class="collapse" aria-labelledby="headingTwentyTwo" data-parent="#accordion">
+
+             <div class="deodrant">
+          <div class="container mt-5">
+
+               <p> Hi {{ booking.name | title }}, <br>
+                             As per our conversation wdue to covid 19 we have postponed your booking for you for up to 1 year <br>
+                            Your deposit will be transferred to yor desired date and is also valid for any city we operate in as well<br>
+                            For our records we have put your booking as friday the 25th of December so as it remains on our system for administrative purposes<br>
+
+                            We  look forward to rescheduling  your
+        <span class="smallbold">
+                            {{ booking.dance_style | capfirst}} hen party  for  {{ booking.name | title }} in {{ booking.city }}  <br>
+                             you have up to the following date a year from your initial booking to change your booking to
+                              {{ booking.book_before_discount|date:"l dS   F Y" }} <br><br>
+
+        </span>
+
+
+                          </p>
+
+
+
+                            <p>
+                                we have received your deposit of £50 Thank you. <br>
+
+                            </p>
+
+
+                          <br>
+
+                          <p>If you have any enquiries ps don’t hesitate to contact me at any time on 07846518558 <br>
+                              Kind regards <br>
+                              Dance Hen Parties <br>
+                               Party  Coordinator
+                          </p>
+                          <p>Hi {{ booking.name | title }}  here are the details for your  dance hen party in {{ booking.city | title }}  if your group could turn up 10 mins before the event that would be great
+
+                          </p>
+
+              <hr>
+
+
+
+                <div class="row">
+
+                    <table class="table table-borderless">
+                       <thead>
+                       <tr>
+                           <th class="text-left">
+
+                           </th>
+                           <th class="text-center">
+                               <h5>Invoice </h5>
+                           </th>
+
+                           <th class="text-right">
+                               <h4></h4>
+                           </th>
+                       </tr>
+                       </thead>
+                       <tbody>
+                       <tr>
+                           <td>
+                               <p class="blackboldinv">
+                                   <h4>{{ booking.studio }}</h4>
+                                Phone : 07846518558 <br>
+                                HEAD OFFICE ADDRESS <br>
+                                  Third floor Suite 4 <br>
+                                  40-42 Jon Dalton Street <br>
+                                  Manchester <br>
+                                  M2 6LE <br>
+                              </p>
+                           </td>
+
+                           <td class="text-center">
+                               <h5>INVOICE #200{{ booking.id }}</h5>
+                           </td>
+
+                           <td class="text-right">
+
+                               <p class="blackboldinv mr-3">
+                                   <span class="smallbold"> {{ booking.name | title }}  </span><br>
+                                Mobile: {{ booking.phone }} <br>
+                                {{ booking.email }} <br>
+                                {{ booking.enquiry_date }} <br>
+                              </p>
+                           </td>
+                       </tr>
+                       </tbody>
+                    </table>
+
+
+                </div>
+
+
+
+      <!-- / end client details section -->
+      <table class="table ">
+        <thead>
+          <tr>
+
+            <th>
+              <h5>Description</h5>
+            </th>
+            <th class="text-right">
+              <h5>Cost</h5>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+            <td>  <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
+                </p>
+           <p> Name of Special Person : {{ booking.special_person }}</p>
+            <p><span class="blackbold">Location</span> <br>
+
+                Dance Hen Parties @ <br>
+                {{ booking.confirmed_venue.address}}<br>
+                {{ booking.city }} <br>
+                {{ booking.confirmed_venue.postcode }}
+
+            </p>
+
+                        <p><span class="smallbold">Ideas on What to Wear </span> <br>
+                            Trainers for your feet <br>
+                            Loose comfortable clothing on top</p>
+
+                        <br><br>
+                        </td>
+            <td class="text-right"> Workshop : £{{ booking.cost }}  <br> Venue : £{{ booking.studio_cost }} <br>{{ booking.discount }}
+
+
+
+            </td>
+
+          </tr>
+          <tr class="">
+
+
+            <td class="text-right"> <span class="smallbold">Deposit : Receieved </span> </td>
+            <td class="text-right">£50 <br> paid via paypal or bank transfer</td>
+          </tr>
+        <tr class="">
+
+
+            <td class="text-right"><span class="smallbold">Balance : </span></td>
+            <td class="text-right">£{{ booking.balance|floatformat:'2' }} <br>
+
+
+            paid via bank transfer</td>
+          </tr>
+
+        <tr class="">
+
+
+
+            <td class="text-right"><span class="smallbold">Total : </span> </td>
+            <td class="text-right">£{{ booking.total_cost |floatformat:'2'   }} <br>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+          </div>
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="card">
     <div class="card-header" id="headingSixteen">
       <h5 class="mb-0">
