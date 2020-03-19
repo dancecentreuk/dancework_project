@@ -1906,11 +1906,13 @@
                             Your deposit will be transferred to yor desired date and is also valid for any city we operate in as well<br>
                             For our records we have put your booking as friday the 25th of December so as it remains on our system for administrative purposes<br>
 
-                            We  look forward to rescheduling  your
+                            We  look forward to rescheduling  your <br>
         <span class="smallbold">
                             {{ booking.dance_style | capfirst}} hen party  for  {{ booking.name | title }} in {{ booking.city }}  <br>
                              you have up to the following date a year from your initial booking to change your booking to
-                              {{ booking.book_before_discount|date:"l dS   F Y" }} <br><br>
+                               {{ booking.book_before_date|date:"l jS   F Y" }}
+
+            <br><br>
 
         </span>
 
