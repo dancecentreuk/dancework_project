@@ -37,6 +37,7 @@ class Venue(models.Model):
     venue_website = models.URLField(max_length=200,  blank=True)
     capacity = models.IntegerField(blank=True)
     cost = models.IntegerField( blank=True)
+    venue_cost = models.IntegerField(blank=True,)
     no_studios = models.IntegerField(default=1)
     photo_main = models.ImageField(upload_to='photos/venue/%Y/%m/%d/', blank=True)
     photo_1 = models.ImageField(upload_to='photos/venue/%Y/%m/%d/', blank=True)

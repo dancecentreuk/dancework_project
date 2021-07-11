@@ -15,7 +15,7 @@ class Booking(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     email = models.CharField(max_length=200)
-    phone = models.CharField(max_length=13)
+    phone = models.CharField(max_length=13, blank=True, )
     initial_chat = models.BooleanField(default=False)
     event_date = models.DateField()
     event_length = models.CharField(
@@ -33,6 +33,7 @@ class Booking(models.Model):
     group_size = models.IntegerField(blank=True, null=True)
     enquiry_date = models.DateTimeField(default=datetime.now, blank=True)
     city = models.ForeignKey(City, on_delete=models.DO_NOTHING)
+    dance_company = models.ForeignKey(Studio, on_delete=models.DO_NOTHING)
     venue_1 = models.ForeignKey(Venue, related_name='venue_1', on_delete=models.DO_NOTHING, blank=True, null=True)
     venue_2 = models.ForeignKey(Venue, related_name='venue_2', on_delete=models.DO_NOTHING, blank=True, null=True)
     venue_3 = models.ForeignKey(Venue, related_name='venue_3', on_delete=models.DO_NOTHING, blank=True, null=True)
@@ -47,6 +48,7 @@ class Booking(models.Model):
     teacher_paid = models.BooleanField(default=False)
     cost = models.IntegerField(blank=True)
     discount = models.IntegerField(blank=True, default=0)
+    bubbly = models.IntegerField (blank=True, default=0)
     venue_cost = models.IntegerField(blank=True, null=True)
     is_advertised = models.BooleanField(default=False)
     workshop_booked = models.BooleanField(default=False)
@@ -56,6 +58,7 @@ class Booking(models.Model):
     balance_paid = models.BooleanField(default=False)
     problem = models.BooleanField(default=False)
     booking_notes = models.TextField(blank=True)
+    booking_cancelled = models.BooleanField(default=False)
 
 
     def __str__(self):
@@ -168,7 +171,7 @@ class Booking(models.Model):
 
 
     def total_cost(self):
-        return self.studio_cost() + self.workshop_cost() - self.discount
+        return self.studio_cost() + self.workshop_cost() + self.bubbly - self.discount
 
     def black_friday(self):
         return self.workshop_cost() - self.discount - 10

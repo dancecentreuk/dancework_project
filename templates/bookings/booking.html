@@ -46,6 +46,10 @@
                         </tr>
                       </thead>
                       <tbody>
+                      <tr>
+                          <th scope="col">Dance Company</th>
+                          <td>{{ booking.dance_company }}</td>
+                        </tr>
                         <tr>
                           <th scope="row">Contact Person</th>
                           <td>{{ booking.name }}</td>
@@ -56,7 +60,12 @@
                         </tr>
                         <tr>
                           <th scope="row">Contact Mobile</th>
-                          <td colspan="2">{{ booking.phone }}</td>
+                          <td colspan="2">
+                              {% if booking.phone == '' %}
+                                  <span class="highlight">Pls Add a mobile contact number</span>
+                              {% else %}
+                                  {{ booking.phone }}
+                              {% endif %}</td>
                         </tr>
                         <tr>
                             <th>Email :</th>
@@ -86,6 +95,16 @@
                             <td>Teacher :</td>
                             <td> {{ booking.teacher }}</td>
                         </tr>
+                       <tr>
+                            <td>Bubbly</td>
+                            <td>{% if booking.bubbly == 0 %}
+                                <button type="button" class="btn-danger btn-sm ">No Bubbles</button>
+                                {% else %}
+                                <button type="button" class="btn-info btn-sm">Bubbly Included</button>
+                                {% endif %}
+
+                            </td>
+                        <tr>
                         <tr>
                             <td>Is Advertised</td>
                             <td>{% if booking.is_advertised == False %}
@@ -114,6 +133,7 @@
                                 {% endif %}
                             </td>
                         </tr>
+
                          <tr>
                             <td>Booking Sent</td>
                             <td>{% if booking.workshop_booked == False %}
@@ -167,8 +187,18 @@
                       </tr>
                       <tr>
                           <td>Notes</td>
-                          <td>{{ booking.booking_notes }}</td>
+                          <td>{{ booking.booking_notes |linebreaks }}</td>
                       </tr>
+                      {% if booking.booking_cancelled == True %}
+                          <tr>
+                            <td>Booking Cancelled</td>
+                            <td>
+                                <button type="button" class="btn-danger btn-sm ">This has been cancelled</button>
+                            </td>
+                        </tr>
+
+                      {% endif %}
+
 
                       </tbody>
                     </table>
@@ -233,7 +263,7 @@
 
 
             <p class="mt-5">
-                {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on
+                {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }} on
                     {{ booking.event_date|date:"l dS F Y" }}
                 {% if booking.start_time %}
                 from {{ booking.start_time }} - {{ booking.end_time }}
@@ -241,18 +271,18 @@
                 {% endif %}
             </p>
 
-            <p class="mt-5">Hi {{ booking.name }}, <br>
+            <p class="mt-5">Hi {{ booking.name | title }}, <br>
 
                 {% if booking.initial_chat %}
                     As per our conversation, <br>
                 {% else %}
                     {%  if not booking.phone %}
-                        do you have a  contact mobile number you can email over. <br> Alternatively
+                        Do you have a  contact mobile number you can email over. <br> Alternatively
                     {% else  %}
                       we tried to get in contact with you earlier on <br>
                     {% endif %}
                 {% endif %}
-            you can get in contact with James our hen party coordinator on 07846518558</p>
+            you can get in contact with  our Dance Party Coordinator on 07846518558</p>
 
 
                 <p>we are able to accommodate you for your <br><span class="smallbold">
@@ -284,14 +314,13 @@
                         </ol>
 
 
-                        {% if booking.discount %}
-                            <br><br> Discount <br>
-                            plus an additional  £{{ booking.discount }} off !!  a 1.5 hr Dance workshop if booked before the {{ booking.book_before_date|date:"l jS   F Y" }} <br>
-                        {% endif %}
-                    <ol>
-                                                1.5hr dance Party your party is £{{ booking.book_before_discount }} + the cost of the venue  (from £20ph) <br>
-
-                    </ol>
+                        <ol>
+                            {% if booking.discount %}
+                                <br><br> <span class="highlight">Discount </span><br>
+                                plus an additional  £{{ booking.discount }} off !!  a 1.5 hr Dance workshop if booked before the {{ booking.book_before_date|date:"l jS   F Y" }} <br>
+                                1.5hr dance Party your party is £{{ booking.book_before_discount }} + the cost of the venue  (from £20ph) <br>
+                            {% endif %}
+                        </ol>
                     </ul>
 
 
@@ -300,45 +329,50 @@
                 <p>On booking there is a  £50 deposit to secure the dance studio   and the balance is paid up 2  days  before the workshop <br>
                 </p><br><br>
 
-              <p class="exsadie">LOCATIONS</p>
+              <p class="location-heading">VENUES INFO</p>
 
 
 
-                <p>LOCATION 1 <br>
-                    Dance Hen Parties @ <br>
+            <h5> LOCATION 1 </h5>
+                    <img src="{{ booking.venue_1.photo_main.url }}" class="venue-image"  alt="" >
+                    <p>
+                    <span class="company-name">{{ booking.dance_company | capfirst }} @</span>  <br>
                     {{ booking.venue_1.address}}<br>
                     {{ booking.city }}<br>
                     {{ booking.venue_1.postcode }}<br>
-                     Venue Cost: £{{ booking.venue_1.cost }} per hour <br>
-                    Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                     Venue Cost: £{{ booking.venue_1.cost }} per hour <br><br>
+                    <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £{{ booking.studio_cost_1 }}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_1 }} <br>
-                    Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
+                        = £{{ booking.provisional_total_1 }} <br></span>
+                    <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_1.cost}}
-                        = £{{ booking.provisional_1hr_total_1 }}
+                        = £{{ booking.provisional_1hr_total_1 }}</span>
 
 
 
                     {% if booking.venue_2 %}
 
 
-                    <p>LOCATION 2 <br><strong>Dance Hen Parties @</strong><br>
+                        <h5>LOCATION 2</h5>
+                        <img src="{{ booking.venue_2.photo_main.url }}" class="venue-image"  alt="" >
+                    <br>
+                        <p><strong>{{ booking.dance_company | capfirst }}  @</strong><br>
                         {{ booking.venue_2.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_2.postcode }}<br>
                         Venue Cost: £{{ booking.venue_2.cost }} per hour <br>
-                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                        <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £{{ booking.studio_cost_2 }}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_2 }}<br>
-                        Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
+                            = £{{ booking.provisional_total_2 }}</span><br>
+                        <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_2.cost}}
-                        = £{{ booking.provisional_1hr_total_2 }}
+                            = £{{ booking.provisional_1hr_total_2 }}</span>
 
 
                     {% endif %}
@@ -346,40 +380,46 @@
                  {% if booking.venue_3 %}
 
 
-                    <p>LOCATION 3 <br><strong>Dance Hen Parties @</strong><br>
+                     <h5>LOCATION 3</h5>
+                     <img src="{{ booking.venue_3.photo_main.url }}" class="venue-image"  alt="" >
+                    <br>
+                     <p><strong>{{ booking.dance_company | capfirst }}  @</strong><br>
                         {{ booking.venue_3.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_3.postcode }}<br>
                         Venue Cost: £{{ booking.venue_3.cost }} per hour <br>
-                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                        <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £{{ booking.studio_cost_3 }}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_3 }}<br>
-                        Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
+                            = £{{ booking.provisional_total_3 }}</span><br>
+                        <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_3.cost}}
-                        = £{{ booking.provisional_1hr_total_3 }}
+                            = £{{ booking.provisional_1hr_total_3 }}</span>
 
                     {% endif %}
 
                  {% if booking.venue_4 %}
 
 
-                    <p>LOCATION 4 <br><strong>Dance Hen Parties @</strong><br>
+                     <h5>LOCATION 4 </h5>
+                     <img src="{{ booking.venue_4.photo_main.url }}" class="venue-image"  alt="" >
+                    <br>
+                     <p><strong>{{ booking.dance_company | capfirst }}  @</strong><br>
                         {{ booking.venue_4.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_4.postcode }}<br>
                         Venue Cost: £{{ booking.venue_4.cost }} per hour <br>
-                        Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                       <span class="venue-cost"> Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £{{ booking.studio_cost_4 }}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
-                        = £{{ booking.provisional_total_4 }}<br>
-                        Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
+                           = £{{ booking.provisional_total_4 }}</span><br>
+                        <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_4.cost}}
-                        = £{{ booking.provisional_1hr_total_4 }}
+                            = £{{ booking.provisional_1hr_total_4 }}</span>
 
 
                     {% endif %}
@@ -427,6 +467,7 @@
             <div class="container">
                 <img class="" src="{% static 'img/dancehemparties_ad.jpg' %}" alt="">
             </div>
+            <br><br>
         </section>
 
 
@@ -445,8 +486,9 @@
             <br>
 
 
-                    {% if not booking.phone %}
-                        1.)  A contact  mobile number <br>
+                    {% if booking.phone ==  '' %}
+                        <span class="highlight">1.)  A contact  mobile number <br></span>
+
                     {% endif %}
 
                      {% if not booking.special_person %}
@@ -507,7 +549,18 @@
                 </tr>
                 <tr>
                   <th scope="row">Contact Mobile</th>
-                  <td colspan="2">{{ booking.phone }}</td>
+                  <td colspan="2">
+
+                      {% if booking.phone == '' %}
+                          <span class="highlight">Pls email over a contact number</span>
+                      {% else %}
+                          {{ booking.phone }}
+                      {% endif %}
+
+
+
+
+                      </td>
                 </tr>
                 <tr>
                     <th>Email :</th>
@@ -556,9 +609,9 @@
 </div>
 
             <p>Kind regards <br>
-                Dance Hen Parties  <br>
+                {{ booking.dance_company | capfirst }}   <br>
                 Admin Team <br>
-                www.dancehenparties.co.uk
+                {{ booking.dance_company.studio_website }}
             </p><br>
 
 
@@ -730,11 +783,11 @@
         <div class="col-12">
 
 
-        <p>Ps check it hasnt travelled to spam by accident</p> <br><br>
+        <p>Pls check it hasnt travelled to spam by accident</p> <br><br>
 
 
 
-            <p>Hi {{ booking.name }}, weve sent an email to {{ booking.email }} <br>
+            <p>Hi {{ booking.name | title }}, weve sent an email to {{ booking.email }} <br>
 
                 {% if booking.initial_chat %}
                     As per our conversation, <br>
@@ -787,7 +840,7 @@
 
 
                 <p>LOCATION 1 <br>
-                    Dance Hen Parties @ <br>
+                    <strong>{{ booking.dance_company }}</strong> @ <br>
                     {{ booking.venue_1.address}}<br>
                     {{ booking.city }}<br>
                     {{ booking.venue_1.postcode }}<br>
@@ -797,7 +850,8 @@
                     {% if booking.venue_2 %}
 
 
-                    <p>LOCATION 2 <br><strong>Dance Hen Parties @</strong><br>
+                    <p>LOCATION 2 <br>
+                        <strong>{{ booking.dance_company }} @</strong><br>
                         {{ booking.venue_2.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_2.postcode }}<br>
@@ -808,7 +862,7 @@
                  {% if booking.venue_3 %}
 
 
-                    <p>LOCATION 3 <br><strong>Dance Hen Parties @</strong><br>
+                    <p>LOCATION 3 <br><strong>{{ booking.dance_company }} @</strong><br>
                         {{ booking.venue_3.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_3.postcode }}<br>
@@ -820,7 +874,7 @@
                  {% if booking.venue_4 %}
 
 
-                    <p>LOCATION 4 <br><strong>Dance Hen Parties @</strong><br>
+                    <p>LOCATION 4 <br><strong>{{ booking.dance_company }} @</strong><br>
                         {{ booking.venue_4.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_4.postcode }}<br>
@@ -834,9 +888,9 @@
 
 
               <p>Kind Regards <br>
-              Dance Hen Parties<br>
+              {{ booking.dance_company }}<br>
               Admin Team <br>
-              www.dancehenparties.co.uk</p>
+              {{ booking.dance_company.studio_website }}</p>
         </div>
     </div>
     </div>
@@ -899,25 +953,25 @@
 
           <br>
               hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
-              <br>
+              <br><br><br>
 
                <p> Hi {{ booking.name | title }}, <br>
                              We look forward to seeing your <br>
-        <span class="smallbold">
+        <span class="smallbold highlight">
             {{ booking.dance_style | capfirst}} hen party  for  {{ booking.name | title }} in {{ booking.city }} on <br>
                               {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time }}<br>
 
         </span>
 
-                              Ps find booking invoice below
+                              Pls find booking invoice below
                           </p>
 
-                          <p> Ps make sure times dates are correct also ps make a note of the addresse of the venue for the hen party its in the city centre in {{ booking.city }}
+                          <p> Pls make sure times dates are correct also pls make a note of the addresse of the venue for the hen party its in the city centre in {{ booking.city }}
                           </p>
                           <p class="exsadie">You can either confirm the booking with a £50 deposit via bank transfer (details provided below) or pay pal with a  link from  our website
                           </p><br>
-                          <p><span class="exsadie">
-                              Paypal ps click on link below
+                          <p><span class="exsadie highlight">
+                              Paypal pls click on link below
                           </span><br><br>
 
 
@@ -925,10 +979,10 @@
                               <br>
 
                           </p><br>
-                          <p><span class="exsadie">
+                          <p><span class="exsadie highlight">
                               Bank Transfer
                           </span> <br>
-                              ps find bank details for bacs transfer for the deposit ps use your name as  a reference
+                             <span class="highlight">Please find bank details for bacs transfer for the deposit pls use your name as  a reference</span>
                               <br>Via bacs <br>
                               Bank is Santander <br>
                               Sort Code is 09-01-28 <br>
@@ -936,9 +990,9 @@
                               Name is  DANCE CENTRE UK <br>
 
                           </p>
-                          <p>If you have any enquiries ps don’t hesitate to contact me at any time on 07846518558 <br>
+                          <p>If you have any enquiries pls don’t hesitate to contact me at any time on 07846518558 <br>
                               Kind regards <br>
-                              Dance Hen Parties <br>
+                              {{ booking.dance_company }} <br>
                               Hen Party  Coordinator
                           </p>
                           <p>Hi {{ booking.name | title }}  here are the details for your  dance hen party in {{ booking.city | title }}  if your group could turn up 10 mins before the event that would be great
@@ -961,7 +1015,7 @@
                        <tr>
                            <td>
                                <p class="blackboldinv ml-3">
-                                   <span class="smallbold"> Dance Hen Parties </span><br>
+                                   <span class="smallbold"> {{booking.dance_company}} </span><br>
                                 Phone : 07846518558 <br>
                                 HEAD OFFICE ADDRESS <br>
                                   Third floor Suite 4 <br>
@@ -1010,7 +1064,12 @@
 
             <td>  <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
                 {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}} </span></p>
-           <p> Name of Special Person : {{ booking.special_person }}</p>
+
+           <p> Name of Special Person : {{ booking.special_person | title }}</p>
+
+                {% if booking.bubbly > 0 %}
+                    <p><span class="highlight">Bubbly Included</span></p>
+                {% endif %}
             <p><span class="blackbold">Location</span> <br>
 
                 Dance Hen Parties @ <br>
@@ -1030,6 +1089,9 @@
                         </td>
             <td class="text-right"> Workshop : £{{ booking.workshop_cost }} <br>
                 Venue : £{{ booking.studio_cost }} <br>
+            {% if booking.bubbly > 0 %}
+                Bubbly : £{{ booking.bubbly }}
+            {% endif %}<br>
                 {% if booking.discount %}
                 Discount : -  £{{ booking.discount }}<br>
                 {% endif %}
@@ -1109,7 +1171,7 @@
         <div class="col-12">
 
 
-            <p>Hi {{ booking.name }}, weve sent an email to {{ booking.email }} <br>
+            <p>Hi {{ booking.name | title}}, weve sent an email to {{ booking.email }} <br>
                 provisionally booking your
             </p> <br>
 
@@ -1120,11 +1182,11 @@
 
 
             <p>
-                Ps make sure times dates are correct also ps make a  note of the address of your venue <br>
+                Please make sure times dates are correct also ps make a  note of the address of your venue <br>
                 If You can confirm your booking  via the deposit your booking will be finalised <br>
                 Kind Regards <br>
-                James  Cooke <br>
-                Dance Hen Parties <br>
+                {{ booking.dance_company }} <br>
+                Admin Team
 
             </p> <br>
 
@@ -1156,9 +1218,9 @@
 
             <p>
                 Kind Regards <br>
-                Dance Hen Parties<br>
+                {{ booking.dance_company}}<br>
                 Admin Team <br>
-                www.dancehenparties.co.uk
+                {{ booking.dance_company.studio_website }}
             </p>
 
         </div>
@@ -1191,7 +1253,7 @@
              {% endif %}
 
              Hi {{ booking.confirmed_venue.venue_coordinator }}, Hope all is well. <br><br>
-             Ps can i confirm the booking of the studio on the following day and time <br><br>
+             Please can i confirm the booking of the studio on the following day and time <br><br>
               Studio Confirmation :       {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}<br><br>
 
             ref no : {{ booking.id }} <br><br>
@@ -1302,15 +1364,15 @@
 
                     <h4>CUSTOMER DAY B4 BOOKING TEXT BALANCE PAID</h4> <br>
 
-                        <p> Hi {{ booking.name }} <br>
-                            we look forward to your <br><br>
+                        <p> Hi {{ booking.name | title }}, <br>
+                            We look forward to your <br><br>
                         {{ booking.dance_style }} hen party in {{ booking.city }} on <br>
                         {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}
                             <br> <br></p>
 
                         <p>
-                        ps can you email or text the number of ladies in your group <br><br>
-                        your instructor on the day is {{ booking.teacher.first_name }}<br>
+                        Pls can you email or text the number of ladies in your group <br><br>
+                        your instructor on the day is {{ booking.teacher.first_name | title }}<br>
                         <strong>contact number : </strong> {{ booking.teacher.mobile }}<br>
                         </p>
 
@@ -1322,11 +1384,11 @@
                             {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time  }} - {{ booking.end_time }}
                             <br><br></p>
 
-                        <p> Name Of Hen:  {{ booking.special_person }} <br><br></p>
+                        <p> Name Of Special Person:  {{ booking.special_person }} <br><br></p>
 
                         <p>Location <br><br></p>
 
-                        <p> {{ booking.studio }}  @ <br>
+                        <p> {{ booking.dance_company }}  @ <br>
                             {{ booking.confirmed_venue}} <br>
                             {{ booking.confirmed_venue.address}} <br>
                             {{ booking.confirmed_venue.postcode}} <br><br>
@@ -1344,14 +1406,14 @@
                     <h4>Day b4 booking balance needed</h4>
 
 
-                    <p> Hi {{ booking.name}} weve sent an email to  {{ booking.email }} <br>
+                    <p> Hi {{ booking.name | title}} weve sent an email to  {{ booking.email }} <br>
                     we look forward to your
                         <br><br>
                     {{ booking.dance_style }} hen party in {{ booking.city }} on <br>
                     {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }}-{{ booking.end_time }} <br><br></p>
                     <p>
-                    ps can you email or text the number of ladies in your group <br>
-                    your instructor on the day is {{ booking.teacher.first_name }}<br>
+                    Pls can you email or text the number of ladies in your group <br>
+                    your instructor on the day is {{ booking.teacher.first_name | title }}<br>
                     <strong>contact number : </strong> {{ booking.teacher.mobile }}<br><br>
                     </p>
                     <p>
@@ -1368,14 +1430,14 @@
                     admin team <br><br>
                     </p>
 
-                    <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }}<br>
+                    <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name | title }} in {{ booking.city |title }}<br>
                     {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time}} <br><br> </p>
 
-                    <p> Name Of Special Person:  {{ booking.special_person }} <br><br></p>
+                    <p> Name Of Special Person:  {{ booking.special_person | title }} <br><br></p>
 
                     <p>Location <br><br></p>
 
-                    <p> Dance Hen Parties  @ <br>
+                    <p> {{ booking.dance_company}} @ <br>
                     {{ booking.confirmed_venue}} <br>
                     {{ booking.confirmed_venue.address}} <br>
                     {{ booking.confirmed_venue.postcode}} <br><br>
@@ -1409,8 +1471,8 @@
 
                         <h4> TEACHER BOOKING TEXT FOR SUPPLIERS</h4> <br><br><br>
 
-                            <p> Hi {{ booking.teacher }} hope all is well and thank you <br>
-                                PS TEXT BACK TO CONFIRM YOU HAVE RECIEVED MESSAGE X </p>
+                            <p> Hi {{ booking.teacher | title }} hope all is well and thank you <br>
+                                PLS TEXT BACK TO CONFIRM YOU HAVE RECEIVED THIS MESSAGE X </p>
 
                             <p> on the day ps <br>
                                 1.) arrive 30 mins before  get set up <br>
@@ -1418,7 +1480,7 @@
                                 3.) Text me on arrival <br>
                                 4.) Take Back up Music sytem or Cd if possible <br>
                                 5.) Email invoice and text over Bank details so we can pay you <br>
-                                6.)ps Take a photo of the group and send it to us at the end of the session  br
+                                6.)Pls Take a photo of the group and send it to us at the end of the session  br
                                 6.) HAVE FUN !!!! X </p>
 
                             <p>{{ booking.group_size }} ladies in the group <br>
@@ -1448,18 +1510,18 @@
 
                         <h4> TEACHER BOOKING TEXT FOR PRIVATE INDIVIDUALS </h4> <br><br><br>
 
-                        <p> Hi {{ booking.teacher }} hope all is well and thank you <br>
-                            PS TEXT BACK TO CONFIRM YOU HAVE RECIEVED MESSAGE X </p>
+                        <p> Hi {{ booking.teacher | title }} hope all is well and thank you <br>
+                            PLS TEXT BACK TO CONFIRM YOU HAVE RECEIVED MESSAGE X </p>
 
-                        <p> 5 days before ps <br>
-                            1.)contact the group to let them know you are running the workshop X <br>
-                            2.)find out no of people in the groups <br>
-                            3.)confirm you have the same location and times as well</p>
+                        <p> 5 days before pls <br>
+                            1.) Contact the group to let them know you are running the workshop X <br>
+                            2.) Find out no of people in the groups <br>
+                            3.) Confirm you have the same location and times as well</p>
 
-                        <p>{{ booking.name }} <br>
+                        <p>{{ booking.name | title }} <br>
                         {{ booking.phone }}</p>
 
-                        <p><br>on the day ps <br>
+                        <p><br>on the day pls <br>
                             1.) arrive 30 mins before  get set up <br>
                             2.) text me in the morning to let me know all is ok <br>
                             3.) Text me on arrival <br>
@@ -1469,7 +1531,7 @@
                             7.) HAVE FUN !!!! X <br><br></p>
 
                         <p> {{ booking.group_size }} ladies in the group <br>
-                            (this is an estimate) ps confirm with group their number size <br>
+                            (this is an estimate) pls confirm with group their number size <br>
                             PAY  £{{ booking.teacher_fee }}</p><br>
 
                         <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }}<br>
@@ -1569,7 +1631,7 @@
                        <tr>
                            <td>
                                <p class="blackboldinv">
-                                   <h4>{{ booking.studio }}</h4>
+                                  <span class="smallbold">{{ booking.dance_company | title }} </span> <br>
                                 Phone : 07846518558 <br>
                                 HEAD OFFICE ADDRESS <br>
                                   Third floor Suite 4 <br>
@@ -1619,10 +1681,17 @@
 
             <td>  <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
                 {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}} </span></p>
-           <p> Name of Special Person : {{ booking.special_person }}</p>
+           <p> Name of Special Person : {{ booking.special_person | title}}</p>
+
+                {% if booking.bubbly > 0 %}
+                    <p><span class="highlight">Bubbly : £{{ booking.bubbly  }}</span></p>
+
+            {% endif %} <br>
+
+
             <p><span class="blackbold">Location</span> <br>
 
-                Dance Hen Parties @ <br>
+                {{ booking.dance_company }} @ <br>
                 {{ booking.confirmed_venue.address}}<br>
                 {{ booking.city }} <br>
                 {{ booking.confirmed_venue.postcode }}
@@ -1635,7 +1704,11 @@
 
                         <br><br>
                         </td>
-            <td class="text-right"> Workshop : £{{ booking.cost }}  <br> Venue : £{{ booking.studio_cost }}<br>
+            <td class="text-right">
+                Workshop : £{{ booking.cost }}  <br> Venue : £{{ booking.studio_cost }}<br>
+            {% if booking.bubbly > 0 %}
+            Bubbly : £{{ booking.bubbly  }}
+            {% endif %} <br>
                 {% if booking.discount %} Discount : - £{{ booking.discount }}{%endif %}
 
 
@@ -1726,7 +1799,7 @@
 
         </span>
 
-                              Ps can you email the number of ladies in your group a week before your workshop
+                              <span class="highlight">Pls can you email the number of ladies in your group a week before your workshop</span>
                           </p>
 
                           <p> Your instructor on the day is {% if booking.teacher %} {{ booking.teacher }} {% else %} TBC A week before {% endif %}<br>
@@ -1734,11 +1807,22 @@
 
                           </p>
 
+          {% if booking.balance_paid == True  %}
+
+              <p>
+                    <span class="highlight">We have received Full Payment Thank you.
+                    <br></span>
+
+                </p>
+
+
+              {% else %}
+
                             <p>
-                                we have received your deposit of £50 Thank you. <br>
+                                <span class="highlight">we have received your deposit of £50 Thank you. <br>
                                 if you can pay the balance of £{{ booking.balance|floatformat:'2'  }} via bank transfer up to 2 days before your workshop
                                 <br>
-                                That would be great <br>
+                                That would be great <br></span>
 
                             </p>
 
@@ -1747,7 +1831,7 @@
                           <p><span class="exsadie">
                               Bank Transfer
                           </span> <br>
-                              ps find bank details for bacs transfer for the deposit ps use your name as  a reference
+                              <span class="highlight">Pls find bank details for bacs transfer for the deposit ps use your name as  a reference</span>
                               <br>Via bacs <br>
                               Bank is Santander <br>
                               Sort Code is 09-01-28 <br>
@@ -1755,6 +1839,8 @@
                               Name is  DANCE CENTRE UK <br>
 
                           </p>
+
+          {% endif %}
                           <p>If you have any enquiries ps don’t hesitate to contact me at any time on 07846518558 <br>
                               Kind regards <br>
                               Dance Hen Parties <br>
@@ -1829,7 +1915,7 @@
             <th>
               <h5>Description</h5>
             </th>
-            <th class="text-right">
+            <th class="">
               <h5>Cost</h5>
             </th>
           </tr>
@@ -1839,8 +1925,16 @@
 
             <td>  <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
                 {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}} </span></p>
-           <p> Name of Special Person : {{ booking.special_person }}</p>
+           <p> Name of Special Person : {{ booking.special_person | title }}</p>
+
+                {% if booking.bubbly > 0 %}
+            <p><span class="highlight">Bubbly Included</span></p>
+            {% endif %} <br>
+
+
             <p><span class="blackbold">Location</span> <br>
+
+
 
                 Dance Hen Parties @ <br>
                 {{ booking.confirmed_venue.address}}<br>
@@ -1855,7 +1949,13 @@
 
                         <br><br>
                         </td>
-            <td class="text-right"> Workshop : £{{ booking.cost }}  <br> Venue : £{{ booking.studio_cost }}
+            <td class="text-right">
+
+                Workshop : £{{ booking.cost }}  <br> Venue : £{{ booking.studio_cost }}<br>
+            {% if booking.bubbly > 0 %}
+            Bubbly : £{{ booking.bubbly  }}
+            {% endif %} <br>
+                {% if booking.discount %} Discount : - £{{ booking.discount }}{%endif %}
 
 
 
@@ -2305,6 +2405,31 @@
 
 
 
+    <div class="card">
+    <div class="card-header" id="headingSixteen">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+          web code
+        </button>
+      </h5>
+    </div>
+    <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion">
+      <div class="card-body">
+
+
+
+ {% include 'webcode/_manchesterdance.html' %}
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
 
 
 
@@ -2355,7 +2480,7 @@ the more outrageouse the better</p><br>
 
 
 <hr />
-<p style="text-align: left;">Bubbly : not Included</p>
+<p style="text-align: left;">Bubbly : {% if booking.bubbly > 0 %} Bubbly Included {%  else %} Bubbly Not Included {% endif %}</p>
 
 
 <hr />

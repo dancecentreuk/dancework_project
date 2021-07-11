@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'danceuk.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'danceukparties',
         'USER': 'postgres',
         'PASSWORD': 'passw0rd',
@@ -123,6 +123,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
 
 
 # Static files (CSS, JavaScript, Images)
