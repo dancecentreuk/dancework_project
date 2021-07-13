@@ -253,3 +253,42 @@ p.blackbold{
 .location-heading {
     color: red;
 }
+
+
+
+
+/****new css****/
+
+.location-heading {
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+.venue-image {
+    height: 300px;
+    width: 300px;
+
+    margin: 10px auto;
+
+}
+
+.company-name {
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.venue-cost {
+    background: cyan;
+}
+
+h5 {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+
+.highlight {
+    background: cyan;
+}
