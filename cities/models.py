@@ -45,7 +45,7 @@ class Venue(models.Model):
     notes = models.TextField(blank=True)
 
 
-    @property
+
     def photo_main_url (self):
         if self.photo_main:
             return self.photo_main.url
