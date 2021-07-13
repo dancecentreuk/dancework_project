@@ -45,6 +45,10 @@ class Venue(models.Model):
     notes = models.TextField(blank=True)
 
 
+    @property
+    def photo_main_url (self):
+        if self.photo_main and hasattr(self.photo_main, 'url'):
+            return self.photo_main.url
 
     def __str__(self):
         return self.venue_name
