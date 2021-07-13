@@ -1,5 +1,8 @@
 from django.db import models
 from django.urls import reverse
+from io import BytesIO
+from PIL import Image
+from django.core.files.storage import default_storage
 
 # Create your models here.
 
@@ -60,6 +63,21 @@ class Venue(models.Model):
 
     def get_absolute_url(self):
         return reverse('cities:venue-detail', kwargs={'venue_id': self.pk})
+
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+        memfile = BytesIO()
+
+        img = Image.open(self.photo_main)
+        if img.height > 250 or img.width > 250:
+            output_size = (250, 250)
+            img.thumbnail(output_size, Image.ANTIALIAS)
+            img.save(memfile, 'PNG', quality=95 )
+            default_storage.save(self.photo_main.name, memfile)
+            memfile.close()
+            img.close()
 
 
 
