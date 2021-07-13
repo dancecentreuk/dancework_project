@@ -100,12 +100,20 @@
             <div class="row">
             <div class="col-md-4">
                 {% if venue.photo_main %}
+                    <h5>Main Image</h5>
                     <img src="{{ venue.photo_main.url}}" alt="pooop" class="img-fluid">
                 {% endif %}
             </div>
             <div class="col-md-4">
                 {% if venue.photo_1 %}
+                    <h5>Image 1</h5>
                     <img src="{{ venue.photo_1.url}}" alt="{{ venue.venue_name }}" class="img-fluid">
+                {% endif %}
+            </div>
+             <div class="col-md-4">
+                {% if venue.photo_2 %}
+                    <h5>Image 1</h5>
+                    <img src="{{ venue.photo_2.url}}" alt="{{ venue.venue_name }}" class="img-fluid">
                 {% endif %}
             </div>
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/cities/venue_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cities/venue_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cities/venue-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cities/venue-detail.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,16 +34,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venue-detail.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="venue-detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/cities/venue-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-992">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="357">
+              <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="venue_form.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="venue_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/cities/venue_form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -97,6 +97,7 @@
         <option value="$PROJECT_DIR$/danceuk/settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/cities/venue_form.html" />
+        <option value="$PROJECT_DIR$/templates/cities/venue-detail.html" />
       </list>
     </option>
   </component>
@@ -197,8 +198,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -338,17 +339,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cities/venue-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-992">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cities/venue_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cities/venue-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="114" column="36" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="36" />
         </state>
       </provider>
     </entry>
