@@ -47,7 +47,7 @@ class Venue(models.Model):
 
     @property
     def photo_main_url (self):
-        if self.photo_main and hasattr(self.photo_main, 'url'):
+        if self.photo_main:
             return self.photo_main_url
 
     @property
