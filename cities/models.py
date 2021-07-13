@@ -48,7 +48,7 @@ class Venue(models.Model):
     @property
     def photo_main_url (self):
         if self.photo_main:
-            return self.photo_main_url
+            return self.photo_main.url
 
     @property
     def photo_1_url(self):
