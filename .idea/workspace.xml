@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cities/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cities/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cities/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+            <state relative-caret-position="319">
+              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -73,21 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bookings/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="444">
               <caret line="360" lean-forward="true" selection-start-line="360" selection-end-line="360" />
             </state>
           </provider>
@@ -119,8 +108,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/cities/venue_form.html" />
         <option value="$PROJECT_DIR$/templates/cities/venue-detail.html" />
-        <option value="$PROJECT_DIR$/cities/models.py" />
         <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
+        <option value="$PROJECT_DIR$/cities/models.py" />
       </list>
     </option>
   </component>
@@ -220,8 +209,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -366,19 +355,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cities/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookings/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
+        <state relative-caret-position="-422">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -387,8 +366,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="444">
           <caret line="360" lean-forward="true" selection-start-line="360" selection-end-line="360" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cities/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
