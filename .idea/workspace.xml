@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +252,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50078124" side_tool="true" weight="0.328877" />
@@ -262,8 +259,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
