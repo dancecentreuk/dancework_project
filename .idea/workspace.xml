@@ -83,9 +83,10 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="336" column="8" lean-forward="true" selection-start-line="336" selection-start-column="8" selection-end-line="336" selection-end-column="8" />
+            <state relative-caret-position="178">
+              <caret line="338" column="115" selection-start-line="338" selection-start-column="115" selection-end-line="338" selection-end-column="115" />
               <folding>
+                <element signature="e#13391#13426#0#HTML" expanded="true" />
                 <element signature="e#13367#13402#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -451,9 +452,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="336" column="8" lean-forward="true" selection-start-line="336" selection-start-column="8" selection-end-line="336" selection-end-column="8" />
+        <state relative-caret-position="178">
+          <caret line="338" column="115" selection-start-line="338" selection-start-column="115" selection-end-line="338" selection-end-column="115" />
           <folding>
+            <element signature="e#13391#13426#0#HTML" expanded="true" />
             <element signature="e#13367#13402#0#HTML" expanded="true" />
           </folding>
         </state>
