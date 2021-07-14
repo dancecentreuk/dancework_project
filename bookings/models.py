@@ -38,6 +38,8 @@ class Booking(models.Model):
     venue_2 = models.ForeignKey(Venue, related_name='venue_2', on_delete=models.DO_NOTHING, blank=True, null=True)
     venue_3 = models.ForeignKey(Venue, related_name='venue_3', on_delete=models.DO_NOTHING, blank=True, null=True)
     venue_4 = models.ForeignKey(Venue, related_name='venue_4', on_delete=models.DO_NOTHING, blank=True, null=True)
+    client_venue = models.CharField(max_length=200, blank=True, null=True)
+    client_venue_postcode = models.CharField(max_length=10, blank=True)
     confirmed_venue = models.ForeignKey(Venue, related_name='confirmed_venue', on_delete=models.DO_NOTHING, blank=True, null=True)
     venue_booked = models.BooleanField(default=False)
     venue_paid = models.BooleanField(default=False)
