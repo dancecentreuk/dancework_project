@@ -362,9 +362,8 @@
 
                         <h5>LOCATION 2</h5>
                         <img src="{{ booking.venue_2.photo_main_url }}" alt="">
-{#                        <img src="{{ booking.venue_2.photo_main.url }}" class="venue-image"  alt="" >#}
                     <br>
-                        <p class="mt-3"><strong>{{ booking.dance_company | capfirst }}  @</strong><br>
+                        <p class="mt-3"><span class="company-name">{{ booking.dance_company | capfirst }}  @</span><br>
                         {{ booking.venue_2.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_2.postcode }}<br>
@@ -386,9 +385,9 @@
 
 
                      <h5>LOCATION 3</h5>
-                     <img src="{{ booking.venue_3.photo_main.url }}" class="venue-image"  alt="" >
+                     <img src="{{ booking.venue_3.photo_main.url }}"  alt="" >
                     <br>
-                     <p class="mt-3"><strong>{{ booking.dance_company | capfirst }}  @</strong><br>
+                     <p class="mt-3"><span class="company-name">{{ booking.dance_company | capfirst }}  @</span><br>
                         {{ booking.venue_3.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_3.postcode }}<br>
@@ -409,9 +408,9 @@
 
 
                      <h5>LOCATION 4 </h5>
-                     <img src="{{ booking.venue_4.photo_main.url }}" class="venue-image"  alt="" >
+                     <img src="{{ booking.venue_4.photo_main.url }}" alt="" >
                     <br>
-                     <p class="mt-3"><strong>{{ booking.dance_company | capfirst }}  @</strong><br>
+                     <p class="mt-3"><span class="company-name">{{ booking.dance_company | capfirst }}  @</span><br>
                         {{ booking.venue_4.address}}<br>
                         {{ booking.city }}<br>
                         {{ booking.venue_4.postcode }}<br>
