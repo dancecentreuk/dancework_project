@@ -54,16 +54,31 @@ class Venue(models.Model):
 
         memfile = BytesIO()
 
-        img = Image.open(self.photo_main)
-        if img.height > 250 or img.width > 250:
-            output_size = (250, 250)
-            img.thumbnail(output_size, Image.ANTIALIAS)
-            img.save(memfile, 'PNG', quality=95 )
-            default_storage.save(self.photo_main.name, memfile)
-            memfile.close()
-            img.thumbnail(output_size)
-            img.save(self.photo_main.path)
-            img.close()
+
+        if self.photo_main:
+            img = Image.open(self.photo_main)
+            if img.height > 250 or img.width > 250:
+                output_size = (250, 250)
+                img.thumbnail(output_size, Image.ANTIALIAS)
+                img.save(memfile, 'PNG', quality=95 )
+                default_storage.save(self.photo_main.name, memfile)
+                memfile.close()
+                img.thumbnail(output_size)
+                img.save(self.photo_main.path)
+                img.close()
+
+
+        if self.photo_1:
+            img2 = Image.open(self.photo_1)
+            if img2.height > 250 or img.width > 250:
+                output_size = (250, 250)
+                img2.thumbnail(output_size, Image.ANTIALIAS)
+                img2.save(memfile, 'PNG', quality=95)
+                default_storage.save(self.photo_1.name, memfile)
+                memfile.close()
+                img2.thumbnail(output_size)
+                img2.save(self.photo_1.path)
+                img2.close()
 
 
 
