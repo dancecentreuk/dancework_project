@@ -1,8 +1,9 @@
 from django.db import models
 from django.urls import reverse
-from io import BytesIO
 from PIL import Image
 from django.core.files.storage import default_storage
+from io import BytesIO
+from django.core.files import File
 
 # Create your models here.
 
