@@ -279,17 +279,16 @@
                     {%  if not booking.phone %}
                         Do you have a  contact mobile number you can email over. <br> Alternatively
                     {% else  %}
-                      we tried to get in contact with you earlier on <br>
+                      We tried to get in contact with you earlier on. <br>
                     {% endif %}
                 {% endif %}
-            you can get in contact with  our Dance Party Coordinator on 07846518558</p>
+            You can get in contact with  our Dance Party Coordinator on 07846518558</p>
 
 
-                <p>we are able to accommodate you for your <br><span class="smallbold">
-
-
-                    {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
-                    {{ booking.event_date|date:"l dS F Y" }} from {{ booking.start_time }} - {{ booking.end_time }} or any other time through the day<br> </span>
+                <p>We are able to accommodate you for your <br>
+                    <span class="smallbold highlight">
+                        {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
+                        {{ booking.event_date|date:"l dS F Y" }} from {{ booking.start_time }} - {{ booking.end_time }} or any other time through the day<br> </span>
 
                   We have a dance studio which is situated in the city centre in {{ booking.city }}</p>
 
