@@ -58,8 +58,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="288" column="54" lean-forward="true" selection-start-line="288" selection-start-column="54" selection-end-line="288" selection-end-column="54" />
+            <state relative-caret-position="262">
+              <caret line="353" column="45" selection-start-line="353" selection-start-column="45" selection-end-line="353" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -523,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="288" column="54" lean-forward="true" selection-start-line="288" selection-start-column="54" selection-end-line="288" selection-end-column="54" />
+        <state relative-caret-position="262">
+          <caret line="353" column="45" selection-start-line="353" selection-start-column="45" selection-end-line="353" selection-end-column="45" />
         </state>
       </provider>
     </entry>

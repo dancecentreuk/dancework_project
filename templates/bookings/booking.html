@@ -334,13 +334,13 @@
 
             <h5> LOCATION 1 </h5>
 
-       <div class="container">
+
                 <img class="" src="{{ booking.venue_1.photo_main_url }}" alt="" >
-            </div>
+
 
 
                     <p>
-                    <span class="company-name">{{ booking.dance_company | capfirst }} @</span>  <br>
+                    {{ booking.dance_company | capfirst }} @ <br>
                     {{ booking.venue_1.address}}<br>
                     {{ booking.city }}<br>
                     {{ booking.venue_1.postcode }}<br>
