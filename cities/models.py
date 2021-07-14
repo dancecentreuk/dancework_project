@@ -49,6 +49,24 @@ class Venue(models.Model):
     notes = models.TextField(blank=True)
 
 
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+        memfile = BytesIO()
+
+        img = Image.open(self.photo_main)
+        if img.height > 250 or img.width > 250:
+            output_size = (250, 250)
+            img.thumbnail(output_size, Image.ANTIALIAS)
+            img.save(memfile, 'PNG', quality=95 )
+            default_storage.save(self.photo_main.name, memfile)
+            memfile.close()
+            img.thumbnail(output_size)
+            img.save(self.photo_main.path)
+            img.close()
+
+
+
 
     def photo_main_url (self):
         if self.photo_main:
@@ -66,19 +84,7 @@ class Venue(models.Model):
         return reverse('cities:venue-detail', kwargs={'venue_id': self.pk})
 
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
 
-        memfile = BytesIO()
-
-        img = Image.open(self.photo_main)
-        if img.height > 250 or img.width > 250:
-            output_size = (250, 250)
-            img.thumbnail(output_size, Image.ANTIALIAS)
-            img.save(memfile, 'PNG', quality=95 )
-            default_storage.save(self.photo_main.name, memfile)
-            memfile.close()
-            img.close()
 
 
 
