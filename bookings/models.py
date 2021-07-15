@@ -51,6 +51,8 @@ class Booking(models.Model):
     cost = models.IntegerField(blank=True)
     discount = models.IntegerField(blank=True, default=0)
     bubbly = models.IntegerField (blank=True, default=0)
+    travel = models.IntegerField(blank=True, default=0)
+    added_cost = models.IntegerField(blank=True, default=0)
     venue_cost = models.IntegerField(blank=True, null=True)
     is_advertised = models.BooleanField(default=False)
     workshop_booked = models.BooleanField(default=False)
