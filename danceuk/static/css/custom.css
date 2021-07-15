@@ -190,6 +190,19 @@ span.exsadie{
     font-weight: 700;
 }
 
+p.redinfo{
+    color: #CC181E;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+span.redinfo{
+    color: #CC181E;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+
 
 
 span.blackbold{

@@ -136,6 +136,9 @@ class Booking(models.Model):
     def provisional_total_4(self):
         return self.studio_cost_4() + self.workshop_cost() - self.discount
 
+    def provisional_total_5(self):
+        return self.workshop_cost() - self.discount
+
 
 
 
@@ -161,6 +164,13 @@ class Booking(models.Model):
     def provisional_1hr_total_4(self):
         if self.venue_4:
             return self.venue_4.cost + self.workshop_cost_1h()
+        else:
+            return 0
+
+
+    def provisional_1hr_total_5(self):
+        if self.client_venue:
+            return self.workshop_cost_1h()
         else:
             return 0
 
