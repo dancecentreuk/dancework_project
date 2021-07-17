@@ -349,16 +349,33 @@
                     <span class="company-name">{{ booking.dance_company | capfirst }} @  Clients Location</span> <br>
                     {{ booking.client_venue}}<br>
                     {{ booking.city }}<br>
-                    {{ booking.client_venue_postcode }}<br>
-                     Venue Cost: £0 <br><br>
+                    {{ booking.client_venue_postcode }}<br> <br>
+                     Venue Cost: £0 <br>
+                    {% if booking.travel %}
+                        Travel Fee : £{{ booking.travel }}
+                    {% endif %}
+                    {% if booking.added_cost  %}
+                        Added Cost: £{{ booking.added_cost }}
+                    {% endif %} <br>
+                    {% if booking.bubbly  %}
+                        Bubbly: £{{ booking.bubbly }}
+                    {% endif %}
+                        <br><br>
                     <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £0
+                        {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
                         = £{{ booking.provisional_total_5 }} <br></span>
                     <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £0
+                         {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                         = £{{ booking.provisional_1hr_total_5 }}</span>
         {% endif %}
 
@@ -375,12 +392,19 @@
                      Venue Cost: £{{ booking.venue_1.cost }} per hour <br><br>
                     <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £{{ booking.studio_cost_1 }}
+                        {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
                         = £{{ booking.provisional_total_1 }} <br></span>
                     <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_1.cost}}
+                         {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                         = £{{ booking.provisional_1hr_total_1 }}</span>
 
                     {% endif %}
@@ -400,12 +424,20 @@
                         Venue Cost: £{{ booking.venue_2.cost }} per hour <br>
                         <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £{{ booking.studio_cost_2 }}
+                        {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
+
                             = £{{ booking.provisional_total_2 }}</span><br>
                         <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_2.cost}}
+                             {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                             = £{{ booking.provisional_1hr_total_2 }}</span>
 
 
@@ -424,12 +456,19 @@
                         Venue Cost: £{{ booking.venue_3.cost }} per hour <br>
                         <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £{{ booking.studio_cost_3 }}
+                       {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
                             = £{{ booking.provisional_total_3 }}</span><br>
                         <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_3.cost}}
+                             {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                             = £{{ booking.provisional_1hr_total_3 }}</span>
 
                     {% endif %}
@@ -447,12 +486,19 @@
                         Venue Cost: £{{ booking.venue_4.cost }} per hour <br>
                        <span class="venue-cost"> Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
                         + Venue cost £{{ booking.studio_cost_4 }}
+                        {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                         {% if booking.discount %}
                             - Discount £{{ booking.discount }}
                         {% endif %}
                            = £{{ booking.provisional_total_4 }}</span><br>
                         <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_4.cost}}
+                             {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
                             = £{{ booking.provisional_1hr_total_4 }}</span>
 
 
@@ -876,6 +922,21 @@
 
 
 
+
+
+            {% if booking.client_venue %}
+                <strong>{{ booking.dance_company }}</strong> @ Clients Venue <br>
+                    {{ booking.client_venue}}<br>
+                    {{ booking.city }}<br>
+                    {{ booking.client_venue_postcode }}<br>
+                     Venue Cost : £0 <br><br>
+            {% endif %}
+
+
+         {% if booking.venue_1 %}
+
+
+
                 <p>LOCATION 1 <br>
                     <strong>{{ booking.dance_company }}</strong> @ <br>
                     {{ booking.venue_1.address}}<br>
@@ -883,6 +944,8 @@
                     {{ booking.venue_1.postcode }}<br>
                      Venue Cost :£{{ booking.venue_1.cost }} ph
                 </p><br>
+
+        {% endif %}
 
                     {% if booking.venue_2 %}
 
@@ -1143,8 +1206,14 @@
             <td class="text-right"> Workshop : £{{ booking.workshop_cost }} <br>
                 Venue : £{{ booking.studio_cost }} <br>
             {% if booking.bubbly > 0 %}
-                Bubbly : £{{ booking.bubbly }}
-            {% endif %}<br>
+                Bubbly : £{{ booking.bubbly }} <br>
+            {% endif %}
+             {% if booking.travel %}
+                Travel : £{{ booking.travel }} <br>
+            {% endif %}
+             {% if booking.added_cost %}
+                Added Cost : £{{ booking.added_cost }} <br>
+            {% endif %}
                 {% if booking.discount %}
                 Discount : -  £{{ booking.discount }}<br>
                 {% endif %}
@@ -1672,13 +1741,22 @@
             <p>Pay is £</p>
             <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }}<br>
             {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time  }} - {{ booking.end_time  }} </p>
-            <p>Location</p>
 
-            <p>
+          <p>Location</p>
+              {% if booking.client_venue %}
+                  <p>{{ booking.city }}</p>
+              {% else %}
+
+                   <p>
                 {{ booking.confirmed_venue}}<br>
                 {{ booking.confirmed_venue.address}}<br>
                 {{ booking.confirmed_venue.postcode}}<br>
             </p>
+
+              {% endif %}
+
+
+
           </div>
 
 
@@ -1797,19 +1875,27 @@
 
                         <br><br>
                         </td>
-            <td class="text-right">
-                Workshop : £{{ booking.cost }}  <br> Venue : £{{ booking.studio_cost }}<br>
+             <td class="text-right"> Workshop : £{{ booking.workshop_cost }} <br>
+                Venue : £{{ booking.studio_cost }} <br>
             {% if booking.bubbly > 0 %}
-            Bubbly : £{{ booking.bubbly  }}
-            {% endif %} <br>
-                {% if booking.discount %} Discount : - £{{ booking.discount }}{%endif %}
-
+                Bubbly : £{{ booking.bubbly }} <br>
+            {% endif %}
+             {% if booking.travel %}
+                Travel : £{{ booking.travel }} <br>
+            {% endif %}
+             {% if booking.added_cost %}
+                Added Cost : £{{ booking.added_cost }} <br>
+            {% endif %}
+                {% if booking.discount %}
+                Discount : -  £{{ booking.discount }}<br>
+                {% endif %}
 
 
 
 
 
             </td>
+
 
           </tr>
           <tr class="">
@@ -2042,17 +2128,27 @@
 
                         <br><br>
                         </td>
-            <td class="text-right">
-
-                Workshop : £{{ booking.cost }}  <br> Venue : £{{ booking.studio_cost }}<br>
+            <td class="text-right"> Workshop : £{{ booking.workshop_cost }} <br>
+                Venue : £{{ booking.studio_cost }} <br>
             {% if booking.bubbly > 0 %}
-            Bubbly : £{{ booking.bubbly  }}
-            {% endif %} <br>
-                {% if booking.discount %} Discount : - £{{ booking.discount }}{%endif %}
+                Bubbly : £{{ booking.bubbly }} <br>
+            {% endif %}
+             {% if booking.travel %}
+                Travel : £{{ booking.travel }} <br>
+            {% endif %}
+             {% if booking.added_cost %}
+                Added Cost : £{{ booking.added_cost }} <br>
+            {% endif %}
+                {% if booking.discount %}
+                Discount : -  £{{ booking.discount }}<br>
+                {% endif %}
+
+
 
 
 
             </td>
+
 
           </tr>
           <tr class="">

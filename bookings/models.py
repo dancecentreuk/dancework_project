@@ -124,22 +124,22 @@ class Booking(models.Model):
 
 
     def provisional_total_1(self):
-        return self.studio_cost_1() + self.workshop_cost() - self.discount
+        return self.studio_cost_1() + self.workshop_cost() - self.discount + self.travel + self.added_cost + self.bubbly
 
 
     def provisional_total_2(self):
-        return self.studio_cost_2() + self.workshop_cost() - self.discount
+        return self.studio_cost_2() + self.workshop_cost() - self.discount + self.travel + self.added_cost + self.bubbly
 
 
     def provisional_total_3(self):
-        return self.studio_cost_3() + self.workshop_cost() - self.discount
+        return self.studio_cost_3() + self.workshop_cost() - self.discount + self.travel + self.added_cost + self.bubbly
 
 
     def provisional_total_4(self):
-        return self.studio_cost_4() + self.workshop_cost() - self.discount
+        return self.studio_cost_4() + self.workshop_cost() - self.discount + self.travel + self.added_cost + self.bubbly
 
     def provisional_total_5(self):
-        return self.workshop_cost() - self.discount
+        return self.workshop_cost() - self.discount + self.travel + self.added_cost + self.bubbly
 
 
 
@@ -147,32 +147,32 @@ class Booking(models.Model):
 
     def provisional_1hr_total_1(self):
         if self.venue_1:
-            return self.venue_1.cost + self.workshop_cost_1h()
+            return self.venue_1.cost + self.workshop_cost_1h() + self.travel + self.added_cost + self.bubbly
         else:
             return 0
 
     def provisional_1hr_total_2(self):
         if self.venue_2:
-            return self.venue_2.cost + self.workshop_cost_1h()
+            return self.venue_2.cost + self.workshop_cost_1h() + self.travel + self.added_cost + self.bubbly
         else:
             return 0
 
     def provisional_1hr_total_3(self):
         if self.venue_3:
-            return self.venue_3.cost + self.workshop_cost_1h()
+            return self.venue_3.cost + self.workshop_cost_1h() + self.travel + self.added_cost + self.bubbly
         else:
             return 0
 
     def provisional_1hr_total_4(self):
         if self.venue_4:
-            return self.venue_4.cost + self.workshop_cost_1h()
+            return self.venue_4.cost + self.workshop_cost_1h() + self.travel + self.added_cost + self.bubbly
         else:
             return 0
 
 
     def provisional_1hr_total_5(self):
         if self.client_venue:
-            return self.workshop_cost_1h()
+            return self.workshop_cost_1h() + self.travel + self.added_cost + self.bubbly
         else:
             return 0
 
@@ -185,7 +185,7 @@ class Booking(models.Model):
 
 
     def total_cost(self):
-        return self.studio_cost() + self.workshop_cost() + self.bubbly - self.discount
+        return self.studio_cost() + self.workshop_cost() + self.bubbly - self.discount + self.travel + self.added_cost
 
     def black_friday(self):
         return self.workshop_cost() - self.discount - 10
