@@ -28,8 +28,29 @@ class Studio(models.Model):
     photo_promo = models.ImageField(upload_to='photos/studio/%Y/%m/%d/', blank=True, default='nonr')
 
 
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+        memfile = BytesIO()
+
+
+        if self.photo_promo:
+            img = Image.open(self.photo_promo)
+            if img.height > 400 or img.width > 400:
+                output_size = (400, 400)
+                img.thumbnail(output_size, Image.ANTIALIAS)
+                img.save(memfile, 'PNG', quality=95 )
+                default_storage.save(self.photo_promo.name, memfile)
+                memfile.close()
+                img.thumbnail(output_size)
+                img.save(self.photo_promo.path)
+                img.close()
+
+
     def __str__(self):
         return self.studio_name
+
+
 
 
 class Venue(models.Model):

@@ -65,6 +65,7 @@ class Booking(models.Model):
     booking_cancelled = models.BooleanField(default=False)
 
 
+
     def __str__(self):
         return self.name
 
