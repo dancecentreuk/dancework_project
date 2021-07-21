@@ -548,7 +548,13 @@
 
         <section>
             <div class="container">
-                <img class="" src="{% static 'img/dancehemparties_ad.jpg' %}" alt="">
+                {% if booking.dance_company.photo_promo %}
+                    <img src="{{ booking.dance_company.photo_promo.url }}" alt="">
+                {% else %}
+                    <img class="" src="{% static 'img/dancehemparties_ad.jpg' %}" alt="">
+                    
+                {% endif %}
+                
             </div>
             <br><br>
         </section>

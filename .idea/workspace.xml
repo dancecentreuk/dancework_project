@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="" />
+    <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cities/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-895">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="245">
+              <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -56,7 +58,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookings/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="2196">
               <caret line="167" column="84" lean-forward="true" selection-start-line="167" selection-start-column="84" selection-end-line="167" selection-end-column="84" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -77,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
+            <state relative-caret-position="281">
+              <caret line="555" column="25" selection-start-line="555" selection-start-column="25" selection-end-line="555" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -164,9 +166,9 @@
         <option value="$PROJECT_DIR$/bookings/views.py" />
         <option value="$PROJECT_DIR$/bookings/models.py" />
         <option value="$PROJECT_DIR$/templates/webcode/_liverpool_dance_centre.html" />
-        <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
         <option value="$PROJECT_DIR$/templates/partials/_dances_common.html" />
         <option value="$PROJECT_DIR$/cities/models.py" />
+        <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
       </list>
     </option>
   </component>
@@ -199,11 +201,6 @@
             <path>
               <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
-              <item name="cities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,6 +250,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50078124" side_tool="true" weight="0.328877" />
@@ -260,8 +258,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -469,16 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bookings/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="167" column="84" lean-forward="true" selection-start-line="167" selection-start-column="84" selection-end-line="167" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookings/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1245">
@@ -519,13 +507,6 @@
     <entry file="file://$PROJECT_DIR$/templates/dances/_80s.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/partials/_dances_common.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -535,11 +516,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cities/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-895">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="245">
+          <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bookings/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2196">
+          <caret line="167" column="84" lean-forward="true" selection-start-line="167" selection-start-column="84" selection-end-line="167" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="555" column="25" selection-start-line="555" selection-start-column="25" selection-end-line="555" selection-end-column="25" />
         </state>
       </provider>
     </entry>
