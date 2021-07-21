@@ -8,6 +8,9 @@
 
 {% block content %}
 
+
+
+
     <div class="container" >
      <div class="row my_row_class">
             <div class="mx-auto">
@@ -273,7 +276,7 @@
 
 
             <p class="mt-5">
-                {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }} on
+                {{ booking.dance_style | capfirst }} {% if booking.dance_style2 %} or {{ booking.dance_style2 }} {% endif %} hen party  for  {{ booking.name | title }} in {{ booking.city }} on
                     {{ booking.event_date|date:"l dS F Y" }}
                 {% if booking.start_time %}
                 from {{ booking.start_time }} - {{ booking.end_time }}
@@ -297,7 +300,7 @@
 
                 <p>We are able to accommodate you for your <br>
                     <span class="smallbold highlight">
-                        {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
+                        {{ booking.dance_style | capfirst }}  {% if booking.dance_style2 %} or {{ booking.dance_style2 }} {% endif %}  hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
                         {{ booking.event_date|date:"l dS F Y" }} from {{ booking.start_time }} - {{ booking.end_time }} or any other time through the day<br> </span>
 
                   We have a dance studio which is situated in the city centre in {{ booking.city }}</p>
@@ -663,7 +666,7 @@
                 </tr>
                 <tr>
                     <th>Dance Style :</th>
-                    <td>{{ booking.dance_style }}</td>
+                    <td>{{ booking.dance_style }} {% if booking.dance_style2 %} / {{ booking.dance_style2 }} {% endif %}</td>
                 </tr>
                 <tr>
                     <th>Price :</th>
@@ -696,6 +699,10 @@
                 Admin Team <br>
                 {{ booking.dance_company.studio_website }}
             </p><br>
+
+
+
+
 
 
 
@@ -830,6 +837,177 @@
                     {% include 'dances/_line.html' %}
 
                 {% endif %}
+
+
+
+        {% if booking.dance_style2 %}
+
+
+            <h5 class="mt-5 mb-4"><span class="highlight ">Dance Theme 2</span></h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         {% if booking.dance_style2_id == 1 %}
+
+                    {% include 'dances/_80s.html' %}
+
+
+                {% elif booking.dance_style2_id == 2  %}
+
+                    {% include 'dances/_90s.html' %}
+
+                {% elif booking.dance_style2_id == 3 %}
+
+                    {% include 'dances/_abba.html' %}
+
+                {% elif booking.dance_style2_id == 4 %}
+
+                    {% include 'dances/_belly.html' %}
+
+                {% elif booking.dance_style2_id == 5 %}
+
+                    {% include 'dances/_beyonce.html' %}
+
+                {% elif booking.dance_style2_id == 6 %}
+
+                    {% include 'dances/_bollywood.html' %}
+
+                {% elif booking.dance_style2_id == 7 %}
+
+                    {% include 'dances/_britney.html' %}
+
+                {% elif booking.dance_style2_id == 8 %}
+
+                    {% include 'dances/_burlesque.html' %}
+
+                {% elif booking.dance_style2_id == 9 %}
+
+                    {% include 'dances/_charleston.html' %}
+
+                {% elif booking.dance_style2_id == 10 %}
+
+                    {% include 'dances/_cheerleading.html' %}
+
+                {% elif booking.dance_style2_id == 11 %}
+
+                    {% include 'dances/_chicago.html' %}
+
+                {% elif booking.dance_style2_id == 12 %}
+
+                    {% include 'dances/_commercial.html' %}
+
+                {% elif booking.dance_style2_id == 13 %}
+
+                    {% include 'dances/_dirty_dancing.html' %}
+
+                {% elif booking.dance_style2_id == 14 %}
+
+                    {% include 'dances/_disney.html' %}
+
+                {% elif booking.dance_style2_id == 15 %}
+
+                    {% include 'dances/_fame.html' %}
+
+                {% elif booking.dance_style2_id == 16 %}
+
+                    {% include 'dances/_flamenco.html' %}
+
+                {% elif booking.dance_style2_id == 17 %}
+
+                    {% include 'dances/_flash.html' %}
+
+                {% elif booking.dance_style2_id == 18 %}
+
+                    {% include 'dances/_grease.html' %}
+
+                {% elif booking.dance_style2_id == 19 %}
+
+                    {% include 'dances/_greatest.html' %}
+
+                {% elif booking.dance_style2_id == 20 %}
+
+                    {% include 'dances/_abba.html' %}
+
+                {% elif booking.dance_style2_id == 21 %}
+
+                    {% include 'dances/_musicals.html' %}
+
+                {% elif booking.dance_style2_id == 22 %}
+
+                    {% include 'dances/_pole.html' %}
+
+                {% elif booking.dance_style2_id == 23 %}
+
+                    {% include 'dances/_commercial.html' %}
+
+                {% elif booking.dance_style2_id == 24 %}
+
+                    {% include 'dances/_salsa.html' %}
+
+                {% elif booking.dance_style2_id == 25 %}
+
+                    {% include 'dances/_samba.html' %}
+
+                {% elif booking.dance_style2_id == 26 %}
+
+                    {% include 'dances/_spice.html' %}
+
+                {% elif booking.dance_style2_id == 27 %}
+
+                    {% include 'dances/_street.html' %}
+
+                {% elif booking.dance_style2_id == 28 %}
+
+                    {% include 'dances/_strictly.html' %}
+
+                {% elif booking.dance_style2_id == 29 %}
+
+                    {% include 'dances/_thriller.html' %}
+
+                {% elif booking.dance_style2_id == 30 %}
+
+                    {% include 'dances/_irish.html' %}
+
+                {% elif booking.dance_style2_id == 31 %}
+
+                    {% include 'dances/_dance.html' %}
+
+                {% elif booking.dance_style2_id == 32 %}
+
+                    {% include 'dances/_line.html' %}
+
+                {% endif %}
+
+
+
+         {% endif %}
+
+
+        <p>
+
+
+
+
+
+        <p>Kind Regards <br>
+              {{ booking.dance_company }}<br>
+              Admin Team <br>
+              {{ booking.dance_company.studio_website }}</p>
+
 
 
 
@@ -1217,10 +1395,6 @@
                 {% if booking.discount %}
                 Discount : -  £{{ booking.discount }}<br>
                 {% endif %}
-
-
-
-
 
             </td>
 
@@ -2595,19 +2769,25 @@
 
 
     <div class="card">
-    <div class="card-header" id="headingSixteen">
+    <div class="card-header" id="headingThirty">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirty" aria-expanded="false" aria-controls="collapseThirty">
           web code
         </button>
       </h5>
     </div>
-    <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion">
+    <div id="collapseThirty" class="collapse" aria-labelledby="headingThirty" data-parent="#accordion">
       <div class="card-body">
 
 
 
- {% include 'webcode/_manchesterdance.html' %}
+
+
+             {% if booking.dance_company.studio_name == 'Liverpool Dance Centre' %}
+            {% include 'webcode/_liverpool_dance_centre.html' %}
+        {% else %}
+            not liverpool
+        {% endif %}
 
 
 

@@ -1,0 +1,164 @@
+<div class="main-block">
+
+
+
+                 <img class="image-frame" src="images/dance-hen-party-liverpool.jpg" alt="Dance hen party in Liverpool">
+
+
+
+                 <h2>Hen party {{ booking.name | title }}</h2>
+
+
+
+                 <table width="565" border="1">
+
+  <tr>
+
+    <td width="377"><p class="booking-title">
+        {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }} on <br>
+                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}
+    </p></td>
+
+    <td width="172"><p class="booking-details"> COST</p></td>
+
+  </tr>
+
+  <tr>
+
+    <td><p class="booking-details">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
+
+       {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}</p>
+
+
+
+      <p align="center">&nbsp;</p>
+
+      <p align="center">&nbsp;</p>
+
+      <p align="center">&nbsp;</p>
+
+      <p align="center">Name of Special Person  :   {{ booking.special_person | capfirst }}     <br>
+
+        </p>
+
+      <p align="center">&nbsp;</p>
+
+      <p align="center">Bubbly Included</p>
+
+      <p align="center"><br>
+
+      </p>
+
+
+
+      <p class="booking-title" >Location</p>
+
+      <p>
+                {% if booking.client_venue %}
+                    Dance Hen Parties @ <br>
+                    Clients Venue <br>
+                    {{ booking.client_venue}}<br>
+                    {{ booking.city }} <br>
+                    {{ booking.client_venue_postcode  }}
+                {% else %}
+                    {{ booking.dance_company | capfirst}} @ <br>
+                {{ booking.confirmed_venue.address}}<br>
+                {{ booking.city }} <br>
+                {{ booking.confirmed_venue.postcode }}
+                {% endif %}</p>
+
+      <p>&nbsp;</p>
+
+      <p><br>
+
+      </p>
+
+      <p>&nbsp;</p>
+
+      <p><br>
+
+      </p>
+
+
+
+      <p class="booking-title" > What to wear to your hen party</p>
+
+      <p>comfortable clothing trainers for your feet<br>
+
+        the more outrageouse the better</p>
+
+      <p>&nbsp;</p></td>
+
+    <td><p class="invoice">&nbsp;</p>
+
+
+        Workshop : £{{ booking.workshop_cost }} <br>
+                Venue : £{{ booking.studio_cost }} <br>
+            {% if booking.bubbly > 0 %}
+                Bubbly : £{{ booking.bubbly }} <br>
+            {% endif %}
+             {% if booking.travel %}
+                Travel : £{{ booking.travel }} <br>
+            {% endif %}
+             {% if booking.added_cost %}
+                Added Cost : £{{ booking.added_cost }} <br>
+            {% endif %}
+                {% if booking.discount %}
+                Discount : -  £{{ booking.discount }}<br>
+                {% endif %}
+
+      <p class="invoice">&nbsp;</p>
+
+      <p class="invoice">&nbsp;</p>
+
+      <p class="invoice">&nbsp;</p>
+
+      <p class="invoice">Deposit : £50 via bank transfer or Paypal</p>
+
+      <p>&nbsp;</p>
+
+          <p class="invoice">&nbsp;</p>
+
+          <p class="invoice">&nbsp;</p>
+
+          <p class="invoice">Balance : £{{ booking.balance|floatformat:'2' }}  paid up to 3 days before the booking</p>
+
+          <p class="invoice">&nbsp;</p>
+
+          <p class="invoice">&nbsp;</p>
+
+          <p class="invoice">&nbsp;</p>
+
+          <p class="invoice">&nbsp;</p>
+
+          <p class="booking-details">Total</p>
+
+          <p class="invoice">£{{ booking.total_cost |floatformat:'2'   }}</p></td>
+
+  </tr>
+
+  <tr>
+
+    <td>Any Queries with your booking ps dont hesitate to contact our bookings coordinator on 07846518558 to discuss your requirements on or send an email. to info@liverpooldancecentre.co.uk </td>
+
+    <td><form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+<input type="hidden" name="cmd" value="_s-xclick">
+
+<input type="hidden" name="hosted_button_id" value="QECJAAEGMTEDQ">
+
+<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+
+</form>
+
+
+
+ </td>
+
+  </tr>
+
+</table>
+
+                 </div>
