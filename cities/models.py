@@ -25,7 +25,7 @@ class Studio(models.Model):
     studio_email = models.CharField(max_length=200, help_text='Enter Studio contact')
     studio_mobile = models.CharField(max_length=15, help_text='Enter contact number')
     studio_contact = models.CharField(max_length=200, default='James Cooke')
-    photo_promo = models.ImageField(upload_to='photos/studio/%Y/%m/%d/', blank=True)
+    photo_promo = models.ImageField(upload_to='photos/studio/%Y/%m/%d/', blank=True, default='nonr')
 
 
     def __str__(self):
