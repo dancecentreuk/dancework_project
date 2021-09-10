@@ -1,0 +1,46 @@
+
+    {% if  'bath' in booking.dance_company.studio_website  %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'birmingham' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'bournemouth' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'brighton' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'bristol' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'camridge' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'canterbury' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'cardiff' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'chester' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'edinburgh' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'glasgow' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'leeds' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'leicester' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'liverpoo' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'london' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'manchester' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'newcastle' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'manchester' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'nottingham' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'sheffield' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% elif  'york' in booking.dance_company.studio_website %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
+    {% else %}
+        hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
+    {% endif %}

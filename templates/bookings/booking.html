@@ -11,6 +11,11 @@
 
 
 
+
+
+
+
+
     <div class="container" >
      <div class="row my_row_class">
             <div class="mx-auto">
@@ -386,14 +391,16 @@
         {% if booking.venue_1 %}
 
             <h5> LOCATION 1 </h5>
-                <img class="" src="{{ booking.venue_1.photo_main_url }}" alt="" >
+                    {% if booking.venue_1.photo_main %}
+                            <img src="{{ booking.venue_1.photo_main_url }}" alt="" style="width: 300px">
+                    {% endif %}
                     <p class="mt-3">
                     <span class="company-name">{{ booking.dance_company | capfirst }}</span> @ <br>
                     {{ booking.venue_1.address}}<br>
                     {{ booking.city }}<br>
                     {{ booking.venue_1.postcode }}<br>
                      Venue Cost: £{{ booking.venue_1.cost }} per hour <br><br>
-                    <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.cost }}
+                    <span class="venue-cost">Total hen party cost for {{ booking.booking_quantity }} hr = Workshop Cost £{{ booking.workshop_cost }}
                         + Venue cost £{{ booking.studio_cost_1 }}
                         {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
 
@@ -403,6 +410,15 @@
                             - Discount £{{ booking.discount }}
                         {% endif %}
                         = £{{ booking.provisional_total_1 }} <br></span>
+
+                    {% if booking.booking_quantity > 1.5 %}
+                    <span class="venue-cost">Total hen party cost for 1.5 hr = Workshop Cost £{{ booking.cost }}
+                        + Venue cost £{{ booking.studio_cost_15}}
+                         {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
+                        = £{{ booking.provisional_15hr_total_1 }}</span> <br>
+                        {% endif %}
                     <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_1.cost}}
                          {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
@@ -418,7 +434,9 @@
 
 
                         <h5>LOCATION 2</h5>
-                        <img src="{{ booking.venue_2.photo_main_url }}" alt="">
+                        {% if booking.venue_2.photo_main %}
+                            <img src="{{ booking.venue_2.photo_main_url }}" alt="" style="width: 300px">
+                        {% endif %}
                     <br>
                         <p class="mt-3"><span class="company-name">{{ booking.dance_company | capfirst }}  @</span><br>
                         {{ booking.venue_2.address}}<br>
@@ -436,6 +454,14 @@
                         {% endif %}
 
                             = £{{ booking.provisional_total_2 }}</span><br>
+                        {% if booking.booking_quantity > 1.5 %}
+                    <span class="venue-cost">Total hen party cost for 1.5 hr = Workshop Cost £{{ booking.cost }}
+                        + Venue cost £{{ booking.studio_cost_15}}
+                         {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
+                        = £{{ booking.provisional_15hr_total_1 }}</span> <br>
+                        {% endif %}
                         <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_2.cost}}
                              {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
@@ -450,7 +476,9 @@
 
 
                      <h5>LOCATION 3</h5>
-                     <img src="{{ booking.venue_3.photo_main.url }}"  alt="" >
+                     {% if booking.venue_3.photo_main %}
+                            <img src="{{ booking.venue_3.photo_main_url }}" alt="" style="width: 300px">
+                        {% endif %}
                     <br>
                      <p class="mt-3"><span class="company-name">{{ booking.dance_company | capfirst }}  @</span><br>
                         {{ booking.venue_3.address}}<br>
@@ -467,6 +495,14 @@
                             - Discount £{{ booking.discount }}
                         {% endif %}
                             = £{{ booking.provisional_total_3 }}</span><br>
+                      {% if booking.booking_quantity > 1.5 %}
+                    <span class="venue-cost">Total hen party cost for 1.5 hr = Workshop Cost £{{ booking.cost }}
+                        + Venue cost £{{ booking.studio_cost_15}}
+                         {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
+                        = £{{ booking.provisional_15hr_total_1 }}</span> <br>
+                        {% endif %}
                         <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_3.cost}}
                              {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
@@ -480,7 +516,9 @@
 
 
                      <h5>LOCATION 4 </h5>
-                     <img src="{{ booking.venue_4.photo_main.url }}" alt="" >
+                     {% if booking.venue_4.photo_main %}
+                            <img src="{{ booking.venue_4.photo_main_url }}" alt="" style="width: 300px">
+                        {% endif %}
                     <br>
                      <p class="mt-3"><span class="company-name">{{ booking.dance_company | capfirst }}  @</span><br>
                         {{ booking.venue_4.address}}<br>
@@ -497,6 +535,14 @@
                             - Discount £{{ booking.discount }}
                         {% endif %}
                            = £{{ booking.provisional_total_4 }}</span><br>
+                      {% if booking.booking_quantity > 1.5 %}
+                    <span class="venue-cost">Total hen party cost for 1.5 hr = Workshop Cost £{{ booking.cost }}
+                        + Venue cost £{{ booking.studio_cost_15}}
+                         {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
+                        {% if booking.travel %} +  Travel £{{ booking.travel  }} {% endif %}
+                        {% if booking.added_cost %} + Added Cost £{{ booking.added_cost  }} {% endif %}
+                        = £{{ booking.provisional_15hr_total_1 }}</span> <br>
+                        {% endif %}
                         <span class="venue-cost">Total hen party cost for 1 hr = Workshop Cost £{{ booking.cost | add:"-25"  }}
                         + Venue cost £{{ booking.venue_4.cost}}
                              {% if booking.bubbly %} + Bubbly £{{ booking.bubbly  }} {% endif %}
@@ -850,20 +896,6 @@
 
 
             <h5 class="mt-5 mb-4"><span class="highlight ">Dance Theme 2</span></h5>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1236,7 +1268,7 @@
               <br>Booking Hen Party Dance Class {{ booking.name | title }} {{ booking.city | title }} <br> <br>
 
           <br>
-              hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
+              {% include 'partials/_web_slug.html' %}
               <br><br><br>
 
                <p> Hi {{ booking.name | title }}, <br>
@@ -1265,9 +1297,9 @@
                               Paypal pls click on link below
                           </span><br><br>
 
+                              {% include 'partials/_paypal_link.html' %}
+                              <br><br>
 
-                              www.dancehenparties.co.uk/hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
-                              <br>
 
                           </p><br>
                           <p><span class="exsadie highlight">
@@ -2042,10 +2074,27 @@
 
             <p><span class="blackbold">Location</span> <br>
 
-                {{ booking.dance_company }} @ <br>
+
+
+
+                  Dance Hen Parties @ <br>
+                {% if booking.client_venue %}
+                    Clients Venue <br>
+                    {{ booking.client_venue}}<br>
+                    {{ booking.city }} <br>
+                    {{ booking.client_venue_postcode  }}
+                {% else %}
                 {{ booking.confirmed_venue.address}}<br>
                 {{ booking.city }} <br>
                 {{ booking.confirmed_venue.postcode }}
+                {% endif %}
+
+
+
+
+
+
+
 
             </p>
 
@@ -2295,10 +2344,17 @@
 
 
 
-                Dance Hen Parties @ <br>
+                  Dance Hen Parties @ <br>
+                {% if booking.client_venue %}
+                    Clients Venue <br>
+                    {{ booking.client_venue}}<br>
+                    {{ booking.city }} <br>
+                    {{ booking.client_venue_postcode  }}
+                {% else %}
                 {{ booking.confirmed_venue.address}}<br>
                 {{ booking.city }} <br>
                 {{ booking.confirmed_venue.postcode }}
+                {% endif %}
 
             </p>
 
@@ -2835,11 +2891,37 @@
 <p style="text-align: center;">Name of Hen: {{ booking.special_person }}
 
 </p>
-<p style="text-align: center;"><strong>Location</strong><br>
-Dance Hen Parties @<br>
-{{ booking.confirmed_venue.address}}<br>
-    {{ booking.city }} <br>
-    {{ booking.confirmed_venue.postcode }}</p><br>
+{#<p style="text-align: center;"><strong>Location</strong><br>#}
+{#Dance Hen Parties @<br>#}
+{#{{ booking.confirmed_venue.address}}<br>#}
+{#    {{ booking.city }} <br>#}
+{#    {{ booking.confirmed_venue.postcode }}</p><br>#}
+
+
+
+
+
+
+      <p style="text-align: center;"><strong>Location</strong><br>
+
+
+
+        Dance Hen Parties @ <br>
+                {% if booking.client_venue %}
+                    Clients Venue <br>
+                    {{ booking.client_venue}}<br>
+                    {{ booking.city }} <br>
+                    {{ booking.client_venue_postcode  }}
+                {% else %}
+                {{ booking.confirmed_venue.address}}<br>
+                {{ booking.city }} <br>
+                {{ booking.confirmed_venue.postcode }}
+                {% endif %} </p><br>
+
+
+
+
+
 &nbsp;
 <p style="text-align: center;"><strong>Ideas on What to Wear </strong><br>
 comfortable clothing trainers for your feet<br>

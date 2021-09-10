@@ -22,6 +22,7 @@ class Teacher(models.Model):
     fee = models.IntegerField()
     notes = models.TextField(blank=True)
     dance_school_attended = models.CharField(max_length=200, blank=True)
+    rating = models.IntegerField(default=0)
 
 
     def __str__(self):

@@ -7,7 +7,6 @@ from django.urls import reverse
 from cities.choices import length_choices
 from django.template.defaultfilters import slugify
 
-
 # Create your models here.
 
 
@@ -23,7 +22,7 @@ class Booking(models.Model):
         max_length=5,
         default=None
     )
-    booking_quantity = models.DecimalField(max_digits=2, decimal_places=1)
+    booking_quantity = models.DecimalField(max_digits=3, decimal_places=1)
     book_before_date = models.DateField()
     start_time= models.CharField(max_length=10, blank=True)
     end_time = models.CharField(max_length=10, blank=True)
@@ -97,6 +96,13 @@ class Booking(models.Model):
         else:
             return 0
 
+    def studio_cost_15(self):
+        if self.venue_1:
+            return self.venue_1.cost * 1.5
+        else:
+            return 0
+
+
 
 
 
@@ -109,9 +115,19 @@ class Booking(models.Model):
     def workshop_cost(self):
         if self.booking_quantity == 1:
             return self.cost - 25
-        else:
-            if self.booking_quantity == 1.5:
+        elif self.booking_quantity == 1.5:
                 return self.cost
+        else:
+            if self.booking_quantity > 1.5:
+                return int((self.cost / 1.5 * float(self.booking_quantity)))
+
+
+
+
+
+
+
+
 
 
     def workshop_cost_1h(self):
@@ -141,6 +157,27 @@ class Booking(models.Model):
 
     def provisional_total_5(self):
         return self.workshop_cost() - self.discount + self.travel + self.added_cost + self.bubbly
+
+
+
+
+
+
+
+    def provisional_15hr_total_1(self):
+        return self.venue_1.cost * 1.5  + self.cost - self.discount + self.travel + self.added_cost + self.bubbly
+
+    def provisional_15hr_total_2(self):
+        return self.studio_cost_2() + self.cost - self.discount + self.travel + self.added_cost + self.bubbly
+
+    def provisional_15hr_total_3(self):
+        return self.studio_cost_3() + self.cost - self.discount + self.travel + self.added_cost + self.bubbly
+
+    def provisional_15hr_total_4(self):
+        return self.studio_cost_4() + self.cost - self.discount + self.travel + self.added_cost + self.bubbly
+
+    def provisional_15hr_total_5(self):
+        return self.workshop_cost() - self.cost + self.travel + self.added_cost + self.bubbly
 
 
 

@@ -52,9 +52,12 @@ def booking(request, booking_id):
     booking = get_object_or_404(Booking, pk=booking_id)
     get_dance_style = Booking.objects.filter(dance_style=booking_id)
 
+
+
+
     context = {
         'booking': booking,
-        'poopstyle' : get_dance_style
+        'poopstyle' : get_dance_style,
     }
     return render(request, 'bookings/booking.html', context)
 
