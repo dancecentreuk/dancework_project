@@ -29,6 +29,7 @@ class Booking(models.Model):
     special_person = models.CharField(max_length=80, blank=True)
     dance_style = models.ForeignKey(Style, on_delete=models.DO_NOTHING,)
     dance_style2 = models.ForeignKey(Style, related_name='second_dance', on_delete=models.DO_NOTHING, blank=True, null=True)
+    specific_song = models.CharField(max_length=255, blank=True)
     group_size = models.IntegerField(blank=True, null=True)
     enquiry_date = models.DateTimeField(default=datetime.now, blank=True)
     city = models.ForeignKey(City, on_delete=models.DO_NOTHING)

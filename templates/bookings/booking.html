@@ -89,7 +89,7 @@
                         </tr>
                         <tr>
                             <th>Dance Style :</th>
-                            <td>{{ booking.dance_style }}</td>
+                            <td>{{ booking.dance_style }} <br> {% if booking.specific_song %} {{ booking.specific_song }}{% endif %}</td>
                         </tr>
                         <tr>
                             <th>Price :</th>
@@ -1364,6 +1364,7 @@
                        </tr>
                        </tbody>
                     </table>
+                           <br>
 
 
                 </div>
@@ -1378,16 +1379,29 @@
             <th class="text-left">
               <h5>Description</h5>
             </th>
-            <th class="text-right">
+            <th class="text-center">
               <h5>Cost</h5>
             </th>
           </tr>
+
         </thead>
+
+
         <tbody>
+
+
           <tr>
 
-            <td>  <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
+
+
+            <td>
+                <br><br>
+                <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
                 {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}} </span></p>
+
+            {% if booking.specific_song %}
+                <p> <span class="highlight">Chosen Song: {{ booking.specific_song | title }} </span></p>
+            {% endif %}
 
            <p> Name of Special Person : {{ booking.special_person | title }}</p>
 
@@ -1420,7 +1434,7 @@
 
                         <br><br>
                         </td>
-            <td class="text-right"> Workshop : £{{ booking.workshop_cost }} <br>
+            <td class="text-right"> <br><br> Workshop : £{{ booking.workshop_cost }} <br>
                 Venue : £{{ booking.studio_cost }} <br>
             {% if booking.bubbly > 0 %}
                 Bubbly : £{{ booking.bubbly }} <br>
@@ -1527,9 +1541,18 @@
 
             <p> {{ booking.dance_style | capfirst }} hen party  for  {{ booking.name }} in {{ booking.city }} on <br>
                 {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time }}
-            </p> <br>
+            </p>
 
-            <p>
+
+
+            {% if booking.specific_song %}
+                <p>
+                Chosen Song : {{ booking.specific_song | title }} <br>
+                </p>
+
+            {% endif %}
+
+            <p><br>
                 Name of Special Person : {% if booking.special_person %}
                     {{ booking.special_person | capfirst }}
                 {% else %}
@@ -1729,6 +1752,13 @@
                             {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time  }} - {{ booking.end_time }}
                             <br><br></p>
 
+                  {% if booking.specific_song %}
+                    <p>
+                    Chosen Song : {{ booking.specific_song | title }} <br>
+                    </p>
+
+                {% endif %}
+
                         <p> Name Of Special Person:  {{ booking.special_person }} <br><br></p>
 
                          <p>
@@ -1786,9 +1816,17 @@
                     </p>
 
                     <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name | title }} in {{ booking.city |title }}<br>
-                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time}} <br><br> </p>
+                    {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time}} <br> </p>
 
-                    <p> Name Of Special Person:  {{ booking.special_person | title }} <br><br></p>
+
+                  {% if booking.specific_song %}
+                    <p>
+                    Chosen Song : {{ booking.specific_song | title }} <br>
+                    </p>
+
+                {% endif %}
+
+                    <p><br> Name Of Special Person:  {{ booking.special_person | title }} <br><br></p>
 
                      <p>
                 Location <br>
@@ -1854,6 +1892,13 @@
                             <p>{{ booking.dance_style }} Hen Party  for  {{ booking.special_person }} in {{ booking.city }}<br>
                             {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time }} - {{ booking.end_time}} </p>
 
+                            {% if booking.specific_song %}
+                                <p>
+                                Chosen Song : {{ booking.specific_song | title }} <br>
+                                </p>
+
+                            {% endif %}
+
                             <p> Name Of Special Person:  {{ booking.special_person }}</p>
 
                             <p>Location</p>
@@ -1901,6 +1946,13 @@
 
                         <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }}<br>
                             {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time  }} - {{ booking.end_time  }} </p>
+
+                  {% if booking.specific_song %}
+                        <p>
+                        Chosen Song : {{ booking.specific_song | title }} <br>
+                        </p>
+
+                    {% endif %}
                   <br>
 
                         <p> Name Of Special Person:  {{ booking.special_person }}</p><br>
@@ -1952,8 +2004,17 @@
           <div class="container">
             <p>We have the following job ps can you let me know if you are available </p>
             <p>Pay is £</p>
-            <p>{{ booking.dance_style }} Hen Party  for  {{ booking.name }} in {{ booking.city }}<br>
+            <p>{{ booking.dance_style }} Hen Party  in {{ booking.city }}<br>
             {{ booking.event_date|date:"l jS   F Y"}} from {{ booking.start_time  }} - {{ booking.end_time  }} </p>
+
+
+
+          {% if booking.specific_song %}
+                <p>
+                Chosen Song : {{ booking.specific_song | title }} <br>
+                </p>
+
+            {% endif %}
 
           <p>Location</p>
               {% if booking.client_venue %}
@@ -2334,7 +2395,22 @@
 
             <td>  <p class="blackbold"><span class="smallbold">{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }}<br>
                 {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}} </span></p>
+
+
+
+            {% if booking.specific_song %}
+                <p>
+                Chosen Song : {{ booking.specific_song | title }} <br>
+                </p>
+
+            {% endif %}
+
+
+
            <p> Name of Special Person : {{ booking.special_person | title }}</p>
+
+
+
 
                 {% if booking.bubbly > 0 %}
             <p><span class="highlight">Bubbly Included</span></p>
@@ -2889,6 +2965,14 @@
           <p style="text-align: center;"><strong>{{ booking.dance_style | capfirst }} hen party  for  {{ booking.name | title }} in {{ booking.city }} <br>
  {{ booking.event_date|date:"l dS   F Y" }} from {{ booking.start_time }} - {{ booking.end_time}}
 </strong></p><br>
+
+
+      {% if booking.specific_song %}
+                <p style="text-align: center;">
+                Chosen Song : {{ booking.specific_song | title }} <br>
+                </p>
+
+            {% endif %}
 <p style="text-align: center;">Name of Hen: {{ booking.special_person }}
 
 </p>

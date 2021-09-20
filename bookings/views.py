@@ -65,7 +65,7 @@ def booking(request, booking_id):
 class BookingCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Booking
     fields = [ 'name', 'email', 'phone', 'initial_chat', 'event_date', 'book_before_date', 'event_length', 'booking_quantity', 'start_time', 'end_time', 'special_person',
-               'dance_style', 'dance_style2', 'group_size', 'enquiry_date', 'dance_company', 'city', 'venue_1', 'venue_2', 'venue_3', 'venue_4', 'client_venue', 'client_venue_postcode',
+               'dance_style', 'dance_style2', 'specific_song', 'group_size', 'enquiry_date', 'dance_company', 'city', 'venue_1', 'venue_2', 'venue_3', 'venue_4', 'client_venue', 'client_venue_postcode',
                'confirmed_venue', 'venue_booked', 'venue_paid', 'teacher', 'teacher_fee', 'teacher_confirmed', 'teacher_texted',
                'teacher_paid', 'cost', 'travel', 'added_cost', 'bubbly', 'discount', 'workshop_booked', 'booking_sent', 'deposit_paid', 'agency', 'balance_paid',
                'problem', 'booking_notes',  'is_advertised', 'booking_cancelled']
@@ -80,7 +80,7 @@ class BookingUpdateView(LoginRequiredMixin, UserPassesTestMixin,  UpdateView):
     model = Booking
     fields = ['name', 'email', 'phone', 'initial_chat', 'event_date', 'book_before_date', 'event_length', 'booking_quantity', 'start_time', 'end_time',
               'special_person',
-              'dance_style', 'dance_style2', 'group_size', 'enquiry_date', 'dance_company', 'city', 'venue_1', 'venue_2', 'venue_3', 'venue_4', 'client_venue', 'client_venue_postcode',
+              'dance_style', 'dance_style2', 'specific_song', 'group_size', 'enquiry_date', 'dance_company', 'city', 'venue_1', 'venue_2', 'venue_3', 'venue_4', 'client_venue', 'client_venue_postcode',
               'confirmed_venue', 'venue_booked', 'venue_paid', 'teacher', 'teacher_fee', 'teacher_confirmed',
               'teacher_texted',
               'teacher_paid', 'cost', 'bubbly', 'travel', 'added_cost', 'discount', 'workshop_booked', 'booking_sent', 'deposit_paid', 'agency', 'balance_paid',
