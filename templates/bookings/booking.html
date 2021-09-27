@@ -15,7 +15,6 @@
 
 
 
-
     <div class="container" >
      <div class="row my_row_class">
             <div class="mx-auto">
@@ -2923,10 +2922,12 @@
 
 
              {% if booking.dance_company.studio_name == 'Liverpool Dance Centre' %}
-            {% include 'webcode/_liverpool_dance_centre.html' %}
-        {% else %}
-            not liverpool
-        {% endif %}
+                {% include 'webcode/_liverpool_dance_centre.html' %}
+            {% elif booking.dance_company.studio_name == 'Manchester Dance Centre' %}
+                {% include 'webcode/_manchesterdance.html' %}
+             {% else %}
+                 not local
+            {% endif %}
 
 
 
