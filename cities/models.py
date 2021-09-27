@@ -72,6 +72,8 @@ class Venue(models.Model):
     notes = models.TextField(blank=True)
 
 
+
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
@@ -120,6 +122,10 @@ class Venue(models.Model):
 
     def get_absolute_url(self):
         return reverse('cities:venue-detail', kwargs={'venue_id': self.pk})
+
+
+    class Meta:
+        ordering = ['venue_name']
 
 
 
