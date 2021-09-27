@@ -68,6 +68,8 @@
                     <hr>
                     {% if booking.bubbly > 0 %}
                         <p>Bubbly Included : £{{ booking.bubbly }}</p>
+                        {% else %}
+                        <p>Bubbly: Not Included</p>
                     {% endif %}
                     <hr>
                     <p>Click link Below to pay the deposit</p>

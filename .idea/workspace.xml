@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/webcode/_manchesterdance.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webcode/_manchesterdance.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,10 +28,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
+            <state relative-caret-position="583">
               <caret line="2930" lean-forward="true" selection-start-line="2930" selection-end-line="2930" />
               <folding>
                 <element signature="e#103916#103943#0#HTML" expanded="true" />
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_manchesterdance.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_manchesterdance.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/webcode/_manchesterdance.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="943">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="181">
+              <caret line="72" column="31" lean-forward="true" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -83,9 +82,9 @@
       <find>day b4</find>
       <find>teacher boo</find>
       <find>day befor</find>
-      <find>web co</find>
       <find>studio</find>
       <find>web c</find>
+      <find>web co</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,8 +108,8 @@
         <option value="$PROJECT_DIR$/bookings/models.py" />
         <option value="$PROJECT_DIR$/bookings/views.py" />
         <option value="$PROJECT_DIR$/templates/webcode/_liverpool_dance_centre.html" />
-        <option value="$PROJECT_DIR$/templates/webcode/_manchesterdance.html" />
         <option value="$PROJECT_DIR$/templates/bookings/booking.html" />
+        <option value="$PROJECT_DIR$/templates/webcode/_manchesterdance.html" />
       </list>
     </option>
   </component>
@@ -227,8 +226,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.328877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1734375" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -557,22 +556,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webcode/_manchesterdance.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
+        <state relative-caret-position="583">
           <caret line="2930" lean-forward="true" selection-start-line="2930" selection-end-line="2930" />
           <folding>
             <element signature="e#103916#103943#0#HTML" expanded="true" />
             <element signature="e#99299#99326#0#HTML" expanded="true" />
             <element signature="e#102432#102459#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/webcode/_manchesterdance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="72" column="31" lean-forward="true" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
         </state>
       </provider>
     </entry>
