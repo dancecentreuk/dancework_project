@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cities/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cities/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/_paypal_link.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/_paypal_link.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +32,7 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14169">
+            <state relative-caret-position="24619">
               <caret line="2930" lean-forward="true" selection-start-line="2930" selection-end-line="2930" />
               <folding>
                 <element signature="e#103916#103943#0#HTML" expanded="true" />
@@ -43,16 +43,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="_paypal_link.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/partials/_paypal_link.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="booking_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking_form.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cities/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="126" column="15" lean-forward="true" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
+            <state relative-caret-position="260">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -119,8 +128,8 @@
       <find>day befor</find>
       <find>studio</find>
       <find>web c</find>
-      <find>web co</find>
       <find>venue_ch</find>
+      <find>web co</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,7 +147,6 @@
         <option value="$PROJECT_DIR$/danceuk/static/css/custom.css" />
         <option value="$PROJECT_DIR$/templates/partials/_dances_common.html" />
         <option value="$PROJECT_DIR$/templates/partials/_web_slug.html" />
-        <option value="$PROJECT_DIR$/templates/partials/_paypal_link.html" />
         <option value="$PROJECT_DIR$/teachers/models.py" />
         <option value="$PROJECT_DIR$/bookings/models.py" />
         <option value="$PROJECT_DIR$/templates/webcode/_liverpool_dance_centre.html" />
@@ -146,6 +154,7 @@
         <option value="$PROJECT_DIR$/templates/webcode/_manchesterdance.html" />
         <option value="$PROJECT_DIR$/bookings/views.py" />
         <option value="$PROJECT_DIR$/cities/models.py" />
+        <option value="$PROJECT_DIR$/templates/partials/_paypal_link.html" />
       </list>
     </option>
   </component>
@@ -204,6 +213,12 @@
               <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="bookings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="danceukproject" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="danceukproject" type="b2602c69:ProjectViewProjectNode" />
@@ -499,13 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partials/_paypal_link.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="66" lean-forward="true" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teachers/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
@@ -566,18 +574,6 @@
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking_form.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14169">
-          <caret line="2930" lean-forward="true" selection-start-line="2930" selection-end-line="2930" />
-          <folding>
-            <element signature="e#103916#103943#0#HTML" expanded="true" />
-            <element signature="e#99299#99326#0#HTML" expanded="true" />
-            <element signature="e#102432#102459#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bookings/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -600,11 +596,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cities/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="126" column="15" lean-forward="true" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
+        <state relative-caret-position="260">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24619">
+          <caret line="2930" lean-forward="true" selection-start-line="2930" selection-end-line="2930" />
+          <folding>
+            <element signature="e#103916#103943#0#HTML" expanded="true" />
+            <element signature="e#99299#99326#0#HTML" expanded="true" />
+            <element signature="e#102432#102459#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/partials/_paypal_link.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
