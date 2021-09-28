@@ -45,8 +45,8 @@
       <file leaf-file-name="_paypal_link.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/partials/_paypal_link.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="402">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -617,8 +617,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/partials/_paypal_link.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="402">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>

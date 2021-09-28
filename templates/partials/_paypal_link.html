@@ -42,7 +42,7 @@
     {% elif  'york' in booking.dance_company.studio_website %}
         {{ booking.dance_company.studio_website }}hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}.html
     {% elif  'dancehenparties' in booking.dance_company.studio_website %}
-        {{ booking.dance_company.studio_website }}hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
+        {{ booking.dance_company.studio_website }}/hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
     {% else %}
         {{ booking.dance_company.studio_website }}/hen-party-{{ booking.city | lower }}-{{ booking.slug }}-{{ booking.dance_style.slug }}/
     {% endif %}
