@@ -1436,16 +1436,16 @@
               <td> <br><br><span class="new-right">Workshop : £{{ booking.workshop_cost }} </span> <br>
                 <span class="new-right">Venue : £{{ booking.studio_cost }}</span> <br>
             {% if booking.bubbly > 0 %}
-                Bubbly : £{{ booking.bubbly }} <br>
+                <span class="new-right">Bubbly : £{{ booking.bubbly }}</span> <br>
             {% endif %}
              {% if booking.travel %}
-                Travel : £{{ booking.travel }} <br>
+                 <span class="new-right">Travel : £{{ booking.travel }}</span> <br>
             {% endif %}
              {% if booking.added_cost %}
-                Added Cost : £{{ booking.added_cost }} <br>
+                 <span class="new-right">Added Cost : £{{ booking.added_cost }}</span> <br>
             {% endif %}
                 {% if booking.discount %}
-                Discount : -  £{{ booking.discount }}<br>
+                    <span class="new-right">Discount : -  £{{ booking.discount }}</span><br>
                 {% endif %}
 
             </td>

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a68773b-5a5e-4dcc-b9fa-d541fc5a9fdc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/bookings/booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bookings/booking.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="1436" column="40" selection-start-line="1436" selection-start-column="40" selection-end-line="1436" selection-end-column="40" />
+            <state relative-caret-position="249">
+              <caret line="1459" column="21" lean-forward="true" selection-start-line="1459" selection-start-column="21" selection-end-line="1459" selection-end-column="21" />
               <folding>
                 <element signature="e#103916#103943#0#HTML" expanded="true" />
                 <element signature="e#99299#99326#0#HTML" expanded="true" />
@@ -46,8 +45,8 @@
       <file leaf-file-name="mycss.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/danceuk/static/css/mycss.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="324">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -589,15 +588,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/danceuk/static/css/mycss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="324">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bookings/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="1436" column="40" selection-start-line="1436" selection-start-column="40" selection-end-line="1436" selection-end-column="40" />
+        <state relative-caret-position="249">
+          <caret line="1459" column="21" lean-forward="true" selection-start-line="1459" selection-start-column="21" selection-end-line="1459" selection-end-column="21" />
           <folding>
             <element signature="e#103916#103943#0#HTML" expanded="true" />
             <element signature="e#99299#99326#0#HTML" expanded="true" />
