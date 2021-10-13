@@ -1350,9 +1350,9 @@
 
 
 
-                           <td class="text-right">
+                           <td class="new-right">
 
-                               <p class="blackboldinv mr-3">
+                               <p class="blackboldinv ">
                                    <span class="smallbold"> {{ booking.name | title }}  </span><br>
                                 Mobile: {{ booking.phone }} <br>
                                 {{ booking.email }} <br>
@@ -1378,8 +1378,8 @@
             <th class="text-left">
               <h5>Description</h5>
             </th>
-            <th class="text-center">
-              <h5>Cost</h5>
+            <th class="">
+              <h5 class="new-right">Cost</h5>
             </th>
           </tr>
 
@@ -1433,8 +1433,8 @@
 
                         <br><br>
                         </td>
-            <td class="text-right"> <br><br> Workshop : £{{ booking.workshop_cost }} <br>
-                Venue : £{{ booking.studio_cost }} <br>
+              <td> <br><br><span class="new-right">Workshop : £{{ booking.workshop_cost }} </span> <br>
+                <span class="new-right">Venue : £{{ booking.studio_cost }}</span> <br>
             {% if booking.bubbly > 0 %}
                 Bubbly : £{{ booking.bubbly }} <br>
             {% endif %}
@@ -1454,14 +1454,14 @@
           <tr class="">
 
 
-            <td class="text-right"> <span class="smallbold">Deposit : </span> </td>
-            <td class="text-right">£50 <br> paid via paypal or bank transfer</td>
+            <td class=""> <span class="smallbold">Deposit : </span> </td>
+            <td class="">£50 <br> paid via paypal or bank transfer</td>
           </tr>
         <tr class="">
 
 
-            <td class="text-right"><span class="smallbold">Balance : </span></td>
-            <td class="text-right">£{{ booking.balance|floatformat:'2' }} <br>
+            <td class=""><span class="smallbold">Balance : </span></td>
+            <td class="">£{{ booking.balance|floatformat:'2' }} <br>
 
 
             paid via bank transfer up to 3 days before the workshop</td>
@@ -1471,8 +1471,8 @@
 
 
 
-            <td class="text-right"><span class="smallbold">Total : </span> </td>
-            <td class="text-right">£{{ booking.total_cost |floatformat:'2'   }} <br>
+            <td class=""><span class="smallbold">Total : </span> </td>
+            <td class="">£{{ booking.total_cost |floatformat:'2'   }} <br>
             </td>
           </tr>
 
