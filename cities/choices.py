@@ -51,6 +51,7 @@ city_choices =[
     ('stoke', 'stoke'),
     ('sunderland', 'Sunderland'),
     ('swansea', 'Swansea'),
+    ('swindon', 'Swindon'),
     ('york', 'York'),
 
 ]
